@@ -1,0 +1,109 @@
+.widget{
+	margin-bottom: 45px;
+	font-family: @font-text;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 24px;
+
+	h5, .widget-title{
+		font-family: @font-text;
+		font-size: 16px;
+		font-weight: 400;
+		text-transform: uppercase;
+		border-bottom: 1px solid fade(@text-color, 20%);
+		padding-bottom: 20px;
+		margin-bottom: 20px;
+	}
+
+	ul, ol{
+		margin: 0px;
+		padding: 0px;
+		list-style-type: none;
+
+		li{
+			margin-bottom: 20px;
+
+			a{
+				color: fade(@text-color, 80%);
+			}
+
+			.count{
+				font-size: 10px;
+				color: #fff;
+				background-color: rgba(119, 119, 119, 0.5);
+				display: inline-block;
+				border-radius: 50%;
+				width: 28px;
+				height: 28px;
+				line-height: 28px;
+				text-align: center;
+				margin-right: 10px;
+			}
+
+			&:hover{
+				a{
+					text-decoration: none;
+					color: #4ac3bf;
+				}
+				.count{
+					background-color: #4ac3bf;
+				}
+			}
+		}
+	}
+
+	
+	.widget-tags{
+		font-size: 13px;
+
+		a{
+			display: inline-block;
+			background-color: rgba(119, 119, 119, 0.5);
+			color: #fff;
+			padding: 4px 12px;
+			margin-right: 6px;
+			margin-bottom: 8px;
+
+			&:hover{
+				background-color: #4ac3bf;
+				text-decoration: none;
+			}
+		}
+	}
+
+
+}
+
+
+.search-form{
+	position: relative;
+
+	input{
+		border: 1px solid fade(@text-color, 20%);
+		font-family: @font-text;
+		font-weight: 300;
+		font-size: 13px;
+		text-transform: uppercase;
+		color: @text-color;
+		padding: 15px 20px;
+		padding-right: 40px;
+		width: 100%;
+
+		&:focus{
+			outline: none;
+		}
+	}
+
+	button{
+		position: absolute;
+		right: 0px;
+		top: 0px;
+		height: 100%;
+		background-color: transparent;
+		border: 0px;
+		font-size: 16px;
+		line-height: 100%;
+		padding: 0px 15px;
+		color: @text-color;
+	}
+}

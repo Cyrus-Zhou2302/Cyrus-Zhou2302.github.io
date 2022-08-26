@@ -1,0 +1,246 @@
+.blog-posts{
+	margin-bottom: 30px;
+	
+	article.post-item{
+		margin-bottom: 50px;
+
+		.entry-item{
+			background-repeat: no-repeat;
+			background-position: center top;
+			background-size: cover;
+			position: relative;
+
+			.img-block{
+				width: 100%;
+			}
+
+			.entry-meta{
+				position: absolute;
+				bottom: 0px;
+				left: 30px;
+				right: 0px;
+				background-color: @bg-color;
+
+				.entry-date{
+					display: block;
+					float: left;
+					color: #fff;
+					width: 50px;
+					text-align: center;
+					font-family: @font-text;
+					font-weight: bold;
+					text-transform: uppercase;
+
+					.day{
+						background-color: @brand-color;
+						display: block;
+						height: 50px;
+						line-height: 50px;
+						font-size: 19px;
+					}
+
+					.month{
+						background-color: @title-color;
+						display: block;
+						height: 50px;
+						line-height: 50px;
+						font-size: 15px;
+					}
+				}
+
+				.entry-title{
+					padding-left: 70px;
+					padding-top: 15px;
+					padding-right: 20px;
+
+					h1, h3{
+						font-family: @font-text;
+						font-weight: bold;
+						font-style: italic;
+						font-size: 15px;
+						line-height: 24px;
+						text-transform: uppercase;
+						margin: 0px;
+						max-height: 44px;
+						overflow: hidden;
+						color: @title-color;
+
+						a{
+							color: @title-color;
+						}
+					}
+
+					.entry-author{
+						font-family: @font-text;
+						font-weight: normal;
+						font-size: 12px;
+						text-transform: uppercase;
+						margin-bottom: 5px;
+						line-height: 1.5em;
+					}
+				}
+			}
+
+			.entry-hover{
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				right: 0px;
+				bottom: 0px;
+				background-color: rgba(0,0,0,0.7);
+				visibility: hidden;
+				opacity: 0;
+
+				-webkit-transition: all 0.5s ease;
+				   -moz-transition: all 0.5s ease;
+						transition: all 0.5s ease;
+
+				.inner-table{
+					.inner-cell{
+						text-align: center;
+					}
+				}
+
+				.post-format{
+					font-size: 36px;
+					display: inline-block;
+					background-color: @brand-color;
+					color: #fff;
+					padding: 15px 20px;
+					border-radius: 3px;
+					line-height: 36px;
+					position: relative;
+					top: -50px;
+				}
+			}
+
+			&:hover{
+				.entry-hover{
+					visibility: visible;
+					opacity: 1;
+				}
+			}
+
+		}
+
+	}
+
+	&.blog-grid{
+		article.post-item{
+			margin-bottom: 30px;
+		}
+	}
+
+
+	.blog-links{
+		margin-top: 35px;
+		margin-bottom: 35px;
+		
+		a{
+			display: block;
+			color: #fff;
+			text-align: center;
+			font-size: 13px;
+			font-family: @font-text;
+			font-weight: bold;
+			text-transform: uppercase;
+			background-color: @title-color;
+			line-height: 40px;
+		}
+
+		.link-prev{
+
+		}
+
+		.link-next{
+			background-color: @brand-color;
+		}
+	}
+}
+
+
+
+.blog-content{
+
+	.meta-blocks{
+		margin-top: 30px;
+		margin-bottom: 20px;
+
+		span{
+			display: inline-block;
+			background-color: @brand-color;
+			color: #fff;
+			font-family: @font-text;
+			font-weight: normal;
+			font-size: 11px;
+			text-transform: uppercase;
+			line-height: 30px;
+			padding-left: 15px;
+			padding-right: 15px;
+			margin-right: 10px;
+
+			i{
+				margin-right: 5px;
+				font-size: 14px;
+			}
+		}
+	}
+
+	.footer-block{
+		padding-top: 40px;
+		border-bottom: 1px solid fade(@text-color, 20%);
+		padding-bottom: 30px;
+	}
+
+	.category-blocks{
+		
+		a{
+			display: inline-block;
+			background-color: @brand-color;
+			color: #fff;
+			font-family: @font-text;
+			font-weight: normal;
+			font-size: 13px;
+			text-transform: uppercase;
+			line-height: 30px;
+			padding-left: 15px;
+			padding-right: 15px;
+			margin-right: 10px;
+			letter-spacing: 1px;
+		}
+	}
+
+	.share-blocks{
+		font-family: @font-text;
+		font-size: 16px;
+		font-weight: bold;
+		color: @title-color;
+		text-transform: uppercase;
+
+		a{
+			font-size: 14px;
+			width: 34px;
+			height: 34px;
+			line-height: 34px;
+			background-color: @title-color;
+			color: #fff;
+			display: inline-block;
+			text-align: center;
+			border-radius: 50%;
+			margin-left: 5px;
+
+			-webkit-transition: all 0.25s ease;
+			   -moz-transition: all 0.25s ease;
+					transition: all 0.25s ease;
+
+			&:first-child{
+				margin-left: 20px;
+			}
+
+			&:hover{
+				background-color: @brand-color;
+			}
+		}
+	}
+
+}
