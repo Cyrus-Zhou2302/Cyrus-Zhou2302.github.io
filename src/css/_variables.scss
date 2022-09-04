@@ -1,0 +1,118 @@
+// main colors
+$color_main_1: #2b72e6 !default;
+$color_main_2: #f03f3b !default;
+$color_main_3: #c9a57d !default;
+
+// text colors
+$color_text_1: #d4d4d4 !default;
+$color_text_2: #bcbcbc !default;
+$color_text_3: #525252 !default;
+
+// Grey colors
+$color_grey_1: #7a7a7a !default;
+$color_grey_2: #3a3a3a !default;
+$color_grey_3: #bababa !default;
+$color_grey_4: #d6d6d6 !default;
+$color_grey_5: #ececec !default;
+$color_grey_6: #f9f9f9 !default;
+
+// dark colors
+$color_dark_1: #1b1b1b !default;
+$color_dark_2: #121212 !default;
+$color_dark_3: #232323 !default;
+
+// Colors Updates
+$color_fix: #19c485 !default;
+$color_del: #d74242 !default;
+$color_add: #009ddc !default;
+$color_imp: #967bdc !default;
+$color_up: #e66b3f !default;
+
+// Feature Colors
+$color_feature_1: #19c485 !default;
+$color_feature_2: #967bdc !default;
+$color_feature_3: #009ddc !default;
+$color_feature_4: #e66b3f !default;
+
+// main colors list
+$colors: (
+    "main-1"  : $color_main_1,
+    "main-2"  : $color_main_2,
+    "main-3"  : $color_main_3,
+    "white"   : #fff,
+    "black"   : #000,
+    "1"  : $color_text_1,
+    "2"  : $color_text_2,
+    "3"  : $color_text_3,
+    "grey-1"  : $color_grey_1,
+    "grey-2"  : $color_grey_2,
+    "grey-3"  : $color_grey_3,
+    "grey-4"  : $color_grey_4,
+    "grey-5"  : $color_grey_5,
+    "grey-6"  : $color_grey_6,
+    "dark-1"  : $color_dark_1,
+    "dark-2"  : $color_dark_2,
+    "dark-3"  : $color_dark_3
+) !default;
+
+// Colors Alerts
+$colors_alerts: (
+    "primary"   : #6681ac,
+    "secondary" : #919191,
+    "success"   : #68ab71,
+    "danger"    : #b66c6c,
+    "warning"   : #c1ac58,
+    "info"      : #60aebb,
+    "light"     : #9f9f9f,
+    "dark"      : #6c6c6c
+) !default;
+
+$colors_social: (
+    "behance": #487cfb,
+    "bitbucket": #36517e,
+    "dropbox": #4d86d9,
+    "dribbble": #cc4d86,
+    "deviantart": #bac940,
+    "envato": #91b34c,
+    "facebook": #475995,
+    "flickr": #db0180,
+    "foursquare": #d94a75,
+    "github": #464646,
+    "google": #4285f4,
+    "google-plus": #c14d3d,
+    "instagram": #d12054,
+    "linkedin": #457ab3,
+    "medium": #71c66d,
+    "odnoklassniki": #d8732a,
+    "paypal": #1d3283,
+    "pinterest": #ae262b,
+    "rss": #e06618,
+    "reddit": #de470b,
+    "skype": #62aded,
+    "soundcloud": #df5611,
+    "slack": #543b56,
+    "steam": #272425,
+    "tumblr": #384961,
+    "twitter": #6da9de,
+    "vimeo": #69b5e7,
+    "vk": #657da0,
+    "wordpress": #4072a1,
+    "youtube": #c6271e
+) !default;
+
+// fonts
+$font_nav: "Maven Pro", sans-serif !default;
+$font_title: "Maven Pro", sans-serif !default;
+$font_headings: "Nunito Sans", sans-serif !default;
+$font_footer: "Nunito Sans", sans-serif !default;
+$font_body: "Nunito Sans", sans-serif !default;
+$html_font_size: 16px !default;
+$body_line_height: 1.5 !default;
+
+// media variables
+$media_xxs:           "(max-width: 360px)" !default;
+$media_xs:            "(max-width: 440px)" !default;
+$media_sm:            "(max-width: 575px)" !default;
+$media_md:            "(max-width: 767px)" !default;
+$media_lg:            "(max-width: 992px)" !default;
+$media_xl:            "(max-width: 1200px)" !default;

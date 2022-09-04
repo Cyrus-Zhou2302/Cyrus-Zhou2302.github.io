@@ -1,0 +1,18 @@
+.dx-alert {
+    padding: 14px 19px;
+    margin-bottom: 0;
+    border-radius: 3px;
+
+    + .dx-alert {
+        margin-top: 30px;
+    }
+
+    // Colors
+    @each $name, $color in $colors_alerts {
+        &.dx-alert-#{$name} {
+            color: $color;
+            background-color: lighten($color, 40%);
+            border-color: lighten($color, 37%);
+        }
+    }
+}

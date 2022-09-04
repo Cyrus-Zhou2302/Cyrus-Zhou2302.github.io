@@ -1,0 +1,49 @@
+<!-- START: Slider Reviews
+
+{% include "shared/comment-additional-slider.html" %}
+-->
+<div class="swiper-container dx-slider dx-slider-arrows dx-slider-reviews"
+    data-swiper-speed="400"
+    data-swiper-space="0"
+    data-swiper-slides="2"
+    data-swiper-arrows="true"
+    data-swiper-arrows-clone="true"
+    data-swiper-pagination-dynamic="true"
+    data-swiper-breakpoints="true"
+    data-swiper-loop="true"
+    data-swiper-grabCursor="true">
+
+    <div class="swiper-wrapper">
+        {% macro slide(title="", subtitle="", text="", name="") %}
+        <div class="swiper-slide">
+            <div class="dx-swiper-slide">
+                <div class="dx-review dx-block-decorated">
+                    <div>
+                        <div class="dx-review-title">{{ title }}</div>
+                        <div class="dx-review-subtitle">{{ subtitle }}</div>
+                        <div class="dx-review-text lead">{{ text }}</div>
+                    </div>
+                    <div class="dx-review-rating">
+                        <span class="fas fa-star"></span>
+                        <span class="fas fa-star"></span>
+                        <span class="fas fa-star"></span>
+                        <span class="fas fa-star"></span>
+                        <span class="fas fa-star"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endmacro %}
+        {{ slide('Matthew Stewart', 'Themeforest User', 'Theme is brilliantly designed. I will see how much is customizable and leave another review when planned is done on the theme. Good job guys.') }}
+        {{ slide('Paula Daniel', 'Themeforest User', 'Quality template. Built-in design features made it applicable not only to game portals but also to a business/industrial sites.') }}
+        {{ slide('Robert Chase', 'Themeforest User', 'It took a little while but I was finally able to get the demo data up and was able to get a handle on this theme. I am impressed with the features/functionality and with the responsiveness of the support group.') }}
+        {{ slide('Oliver Harris', 'Themeforest User', "Thanks, so much I love it... So far, I've never seen a theme like it...I want to thank you for your quick response as well... thanks") }}
+        {{ slide('Matthew Stewart', 'Themeforest User', 'Theme is brilliantly designed. I will see how much is customizable and leave another review when planned is done on the theme. Good job guys.') }}
+        {{ slide('Paula Daniel', 'Themeforest User', 'Quality template. Built-in design features made it applicable not only to game portals but also to a business/industrial sites.') }}
+    </div>
+    <div class="swiper-pagination"></div>
+
+    <div class="swiper-button-prev"><span class="icon pe-7s-angle-left"></span></div>
+    <div class="swiper-button-next"><span class="icon pe-7s-angle-right"></span></div>
+</div>
+<!-- END: Slider Reviews -->

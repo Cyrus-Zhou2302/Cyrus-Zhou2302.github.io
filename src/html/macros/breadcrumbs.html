@@ -1,0 +1,12 @@
+{% macro breadcrumbs(class="", item="", link="", title="") %}
+<!-- START: Breadcrumbs -->
+<ul class="dx-breadcrumbs{% if class %} {{ class }}{% endif %}">
+    {% for link, item, title in item %}
+    <li><a href="{{ link }}.html">{{ item | safe }}</a></li>
+    {% if title %}
+    <li>{{ title }}</li>
+    {% endif %}
+    {% endfor %}
+</ul>
+<!-- END: Breadcrumbs -->
+{% endmacro %}

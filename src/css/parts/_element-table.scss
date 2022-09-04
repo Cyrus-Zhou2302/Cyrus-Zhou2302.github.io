@@ -1,0 +1,231 @@
+.dx-table {
+    width: 100%;
+
+    tbody {
+        tr {
+            padding: 30px;
+
+            + tr {
+                border-top: 1px solid $color_grey_5;
+            }
+            th {
+                padding-right: 28px;
+            }
+            td {
+                padding-right: 30px;
+
+                &:last-child {
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+
+    a:not(.dx-btn) {
+        color: $color_main_1;
+        text-decoration: none;
+
+        &:hover,
+        &.hover {
+            color: $color_dark_1;
+            text-decoration: none;
+        }
+    }
+}
+
+// Style Checkout
+.dx-table-checkout {
+    tbody tr {
+        display: block;
+
+        + tr {
+            padding-top: 0;
+            border-top: 0;
+        }
+
+        .dx-table-checkout-img {
+            > a {
+                display: flex;
+                width: 60px;
+                min-width: 60px;
+                height: 52px;
+                overflow: hidden;
+                border-radius: 3px;
+
+                img {
+                    max-width: 100%;
+                }
+            }
+        }
+        .dx-table-checkout-title {
+            min-width: 220px;
+            font-weight: 600;
+            color: $color_dark_1;
+            letter-spacing: normal;
+
+            a:not(.dx-btn) {
+                display: block;
+                color: $color_dark_1;
+
+                &:hover,
+                &.hover,
+                &:focus {
+                    color: $color_main_1;
+                    text-decoration: none;
+                }
+            }
+
+        }
+        .dx-table-checkout-price {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: $color_dark_1;
+        }
+        .dx-table-checkout-delete > a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 14px;
+            font-size: 2.3rem;
+            color: $color_dark_1;
+            transition: color .2s ease-in-out;
+
+            &:hover,
+            &.hover {
+                color: $color_main_1;
+                text-decoration: none;
+            }
+            &:focus {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+// Style Default
+.dx-table-default {
+    thead {
+        background-color: $color_main_1;
+
+        tr {
+            font-family: $font_title;
+            font-size: .75rem;
+            font-weight: 500;
+            color: #fff;
+            text-transform: uppercase;
+
+            th {
+                padding: 20px;
+                font-weight: inherit;
+
+                &:first-child {
+                    padding-left: 50px;
+                }
+                &:last-child {
+                    padding-right: 50px;
+                }
+
+                @media screen and #{$media_md} {
+                    &:first-child {
+                        padding-left: 30px;
+                    }
+                    &:last-child {
+                        padding-right: 30px;
+                    }
+                }
+            }
+        }
+    }
+    tbody {
+        tr {
+            font-size: .9375rem;
+            font-weight: 400;
+            color: $color_text_3;
+            vertical-align: top;
+            background-color: #fff;
+            transition: background-color .1s ease-in-out;
+
+            &:hover,
+            &.hover {
+                background-color: #fcfcfc;
+            }
+
+            a:not(.dx-btn) {
+                color: $color_main_1;
+            }
+            th {
+                min-width: 300px;
+                padding: 29px;
+                padding-left: 50px;
+                font-weight: inherit;
+            }
+            td {
+                padding: 29px 20px;
+
+                &:last-child {
+                    padding-right: 50px;
+                }
+            }
+            @media screen and #{$media_md} {
+                th {
+                    padding: 24px 20px;
+                    padding-left: 30px;
+                }
+                td {
+                    padding: 24px 20px;
+
+                    &:last-child {
+                        padding-right: 30px;
+                    }
+                }
+            }
+        }
+
+        .dx-table-lastPost {
+            min-width: 220px;
+
+            @media screen and #{$media_md} {
+                min-width: 200px;
+            }
+        }
+        .dx-table-topics {
+            min-width: 350px;
+        }
+        .dx-table-licenseKey {
+            width: 230px;
+            min-width: 210px;
+        }
+        .dx-table-website {
+            width: 230px;
+            min-width: 180px;
+        }
+    }
+
+
+    .dx-table-default-title {
+        display: block;
+        margin-bottom: 7px;
+        font-weight: 600;
+    }
+    .dx-table-default-info {
+        font-size: .875rem;
+
+        a:not(.dx-btn) {
+            color: #993d41;
+        }
+    }
+    .dx-table-default-product {
+        a:not(.dx-btn) {
+            color: $color_dark_2;
+
+            &:hover,
+            &.hover {
+                color: $color_main_1;
+                text-decoration: none;
+            }
+        }
+    }
+    .dx-table-default-website {
+        color: $color_grey_3;
+    }
+}

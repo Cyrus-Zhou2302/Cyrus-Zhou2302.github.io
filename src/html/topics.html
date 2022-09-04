@@ -1,0 +1,242 @@
+{% set header_title = 'Topics - Design with pleasure' %}
+{% extends 'layouts/layout-1.html' %}
+{% set navbar_sticky = true %}
+{% set navbar_expand_lg = true %}
+
+{% block content %}
+
+<header class="dx-header dx-box-1">
+    <div class="container">
+        <div class="bg-image bg-image-parallax">
+            <img src="assets/images/bg-header-4.png" class="jarallax-img" alt="">
+            <div style="background-color: rgba(27, 27, 27, .8);"></div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-xl-7">
+                <h1 class="h2 mb-30 text-white text-center">How can we help you?</h1>
+                <form action="#" class="dx-form dx-form-group-inputs">
+                    <input type="text" name="" value="" class="form-control" placeholder="Keyword search...">
+                    <button class="dx-btn dx-btn-lg">Search</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="dx-box bg-white">
+    <div class="container">
+        <ul class="dx-links text-center">
+            <li><a href="help-center.html">Support Home</a></li>
+            <li><a href="documentations.html">Documentations</a></li>
+            <li><a href="articles.html">Knowledge Base</a></li>
+            <li><a href="forums.html">Forums</a></li>
+            <li><a href="ticket.html">Ticket System</a></li>
+        </ul>
+    </div>
+</div>
+<div class="dx-separator"></div>
+
+<div class="dx-box-5 pb-100 bg-grey-6">
+    <div class="container">
+        <div class="row vertical-gap md-gap">
+            <div class="col-lg-8">
+                <div class="dx-box dx-box-decorated">
+                    <div class="dx-blog-post">
+                        <div class="dx-blog-post-box pt-30 pb-30">
+                            <h2 class="h4 mnt-5 mb-9">Design with pleasure</h2>
+                            {% from "macros/breadcrumbs.html" import breadcrumbs %}
+                            {{ breadcrumbs('text-left dx-breadcrumbs-dark mnb-6 fs-14', [['help-center', 'Support Home'], ['forums', 'Forums', 'Design with pleasure']]) }}
+                        </div>
+                        <div class="table-responsive">
+                            <table class="dx-table dx-table-default">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Topics</th>
+                                        <th scope="col">Replies</th>
+                                        <th scope="col">Views</th>
+                                        <th scope="col">Last Post</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row" class="dx-table-topics">
+                                            <a href="single-topic.html" class="dx-table-default-title">How to choose Best Web Design C...</a>
+                                            <div class="dx-table-default-info">
+                                                <p class="mb-0">by <a href="#">Admin</a> <span class="dib">24 Feb 2018,</span> <span class="dib">09:00 am</span></p>
+                                            </div>
+                                        </th>
+                                        <td>45</td>
+                                        <td>12058</td>
+                                        <td class="dx-table-lastPost">
+                                            <div class="dx-table-default-info">
+                                                <p class="mb-0">by <a href="#">Joseph Harper</a> <span class="dib">24 Feb 2018,</span> <span class="dib">09:00 am</span></p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="dx-table-topics">
+                                            <a href="single-topic.html" class="dx-table-default-title">Fast web design for developers</a>
+                                            <div class="dx-table-default-info">
+                                                <p class="mb-0">by <a href="#">Garey Ross</a> <span class="dib">24 Feb 2018,</span> <span class="dib">09:00 am</span></p>
+                                            </div>
+                                        </th>
+                                        <td>45</td>
+                                        <td>12058</td>
+                                        <td class="dx-table-lastPost">
+                                            <div class="dx-table-default-info">
+                                                <p class="mb-0">by <a href="#">Mabel Nelson</a> <span class="dib">24 Feb 2018,</span> <span class="dib">09:00 am</span></p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="dx-table-topics">
+                                            <a href="single-topic.html" class="dx-table-default-title">How to make responsive web design?</a>
+                                            <div class="dx-table-default-info">
+                                                <p class="mb-0">by <a href="#">Edwin Hines</a> <span class="dib">24 Feb 2018,</span> <span class="dib">09:00 am</span></p>
+                                            </div>
+                                        </th>
+                                        <td>45</td>
+                                        <td>12058</td>
+                                        <td class="dx-table-lastPost">
+                                            <div class="dx-table-default-info">
+                                                <p class="mb-0">by <a href="#">Admin</a> <span class="dib">24 Feb 2018,</span> <span class="dib">09:00 am</span></p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="dx-table-topics">
+                                            <a href="single-topic.html" class="dx-table-default-title">Need help !!!</a>
+                                            <div class="dx-table-default-info">
+                                                <p class="mb-0">by <a href="#">Admin</a> <span class="dib">24 Feb 2018,</span> <span class="dib">09:00 am</span></p>
+                                            </div>
+                                        </th>
+                                        <td>45</td>
+                                        <td>12058</td>
+                                        <td class="dx-table-lastPost">
+                                            <div class="dx-table-default-info">
+                                                <p class="mb-0">by <a href="#">Joseph Harper</a> <span class="dib">24 Feb 2018,</span> <span class="dib">09:00 am</span></p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="dx-table-topics">
+                                            <a href="single-topic.html" class="dx-table-default-title">Having problem with Logo</a>
+                                            <div class="dx-table-default-info">
+                                                <p class="mb-0">by <a href="#">Sandra Reed</a> <span class="dib">24 Feb 2018,</span> <span class="dib">09:00 am</span></p>
+                                            </div>
+                                        </th>
+                                        <td>45</td>
+                                        <td>12058</td>
+                                        <td class="dx-table-lastPost">
+                                            <div class="dx-table-default-info">
+                                                <p class="mb-0">by <a href="#">Admin</a> <span class="dib">24 Feb 2018,</span> <span class="dib">09:00 am</span></p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="dx-table-topics">
+                                            <a href="single-topic.html" class="dx-table-default-title">Need help by creating a new site</a>
+                                            <div class="dx-table-default-info">
+                                                <p class="mb-0">by <a href="#">Admin</a> <span class="dib">24 Feb 2018,</span> <span class="dib">09:00 am</span></p>
+                                            </div>
+                                        </th>
+                                        <td>45</td>
+                                        <td>12058</td>
+                                        <td class="dx-table-lastPost">
+                                            <div class="dx-table-default-info">
+                                                <p class="mb-0">by <a href="#">Alyson Tate</a> <span class="dib">24 Feb 2018,</span> <span class="dib">09:00 am</span></p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="dx-table-topics">
+                                            <a href="single-topic.html" class="dx-table-default-title">Responsive slideshow?</a>
+                                            <div class="dx-table-default-info">
+                                                <p class="mb-0">by <a href="#">Admin</a> <span class="dib">24 Feb 2018,</span> <span class="dib">09:00 am</span></p>
+                                            </div>
+                                        </th>
+                                        <td>45</td>
+                                        <td>12058</td>
+                                        <td class="dx-table-lastPost">
+                                            <div class="dx-table-default-info">
+                                                <p class="mb-0">by <a href="#">Michael Norton</a> <span class="dib">24 Feb 2018,</span> <span class="dib">09:00 am</span></p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="dx-table-topics">
+                                            <a href="single-topic.html" class="dx-table-default-title">Which framework should I chose</a>
+                                            <div class="dx-table-default-info">
+                                                <p class="mb-0">by <a href="#">Abner Wilson</a> <span class="dib">24 Feb 2018,</span> <span class="dib">09:00 am</span></p>
+                                            </div>
+                                        </th>
+                                        <td>45</td>
+                                        <td>12058</td>
+                                        <td class="dx-table-lastPost">
+                                            <div class="dx-table-default-info">
+                                                <p class="mb-0">by <a href="#">Admin</a> <span class="dib">24 Feb 2018,</span> <span class="dib">09:00 am</span></p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="dx-table-topics">
+                                            <a href="single-topic.html" class="dx-table-default-title">Bootstrap Templates Directory</a>
+                                            <div class="dx-table-default-info">
+                                                <p class="mb-0">by <a href="#">Jane Palmer</a> <span class="dib">24 Feb 2018,</span> <span class="dib">09:00 am</span></p>
+                                            </div>
+                                        </th>
+                                        <td>45</td>
+                                        <td>12058</td>
+                                        <td class="dx-table-lastPost">
+                                            <div class="dx-table-default-info">
+                                                <p class="mb-0">by <a href="#">Joseph Harper</a> <span class="dib">24 Feb 2018,</span> <span class="dib">09:00 am</span></p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="dx-table-topics">
+                                            <a href="single-topic.html" class="dx-table-default-title">Slideshows on the main page</a>
+                                            <div class="dx-table-default-info">
+                                                <p class="mb-0">by <a href="#">Admin</a> <span class="dib">24 Feb 2018,</span> <span class="dib">09:00 am</span></p>
+                                            </div>
+                                        </th>
+                                        <td>45</td>
+                                        <td>12058</td>
+                                        <td class="dx-table-lastPost">
+                                            <div class="dx-table-default-info">
+                                                <p class="mb-0">by <a href="#">Admin</a> <span class="dib">24 Feb 2018,</span> <span class="dib">09:00 am</span></p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <ul class="dx-pagination mt-40">
+                    <li class="dx-pagination-icon"><a href="#"><span class="icon pe-7s-angle-left"></span></a></li>
+                    <li><a href="#">1</a></li>
+                    <li class="dx-pagination-space">...</li>
+                    <li><a href="#">8</a></li>
+                    <li class="active"><a href="#">9</a></li>
+                    <li><a href="#">10</a></li>
+                    <li class="dx-pagination-space">...</li>
+                    <li><a href="#">18</a></li>
+                    <li class="dx-pagination-icon"><a href="#"><span class="icon pe-7s-angle-right"></span></a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4">
+                <div class="dx-sticky dx-sidebar" data-sticky-offsetTop="120" data-sticky-offsetBot="40">
+                    {% from "macros/widgets.html" import subscribe, search, latestArticles, latestForums %}
+                    {{ subscribe('') }}
+                    {{ search('') }}
+                    {{ latestArticles('') }}
+                    {{ latestForums('') }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

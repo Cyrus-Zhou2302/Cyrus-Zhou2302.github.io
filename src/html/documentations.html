@@ -1,0 +1,86 @@
+{% set header_title = 'Documentations - How can we help you?' %}
+{% extends 'layouts/layout-1.html' %}
+{% set navbar_sticky = true %}
+{% set navbar_expand_lg = true %}
+
+{% block content %}
+
+    <header class="dx-header dx-box-1">
+        <div class="container">
+            <div class="bg-image bg-image-parallax">
+                <img src="assets/images/bg-header-4.png" class="jarallax-img" alt="">
+                <div style="background-color: rgba(27, 27, 27, .8);"></div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-xl-7">
+                    <h1 class="h2 mb-30 text-white text-center">How can we help you?</h1>
+                    <form action="#" class="dx-form dx-form-group-inputs">
+                        <input type="text" name="" value="" class="form-control" placeholder="Keyword search...">
+                        <button class="dx-btn dx-btn-lg">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="dx-box bg-white">
+        <div class="container">
+            <ul class="dx-links text-center">
+                <li><a href="help-center.html">Support Home</a></li>
+                <li class="active"><a href="documentations.html">Documentations</a></li>
+                <li><a href="articles.html">Knowledge Base</a></li>
+                <li><a href="forums.html">Forums</a></li>
+                <li><a href="ticket.html">Ticket System</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="dx-separator"></div>
+    <div class="dx-box-5 pb-100 bg-grey-6">
+        <div class="container">
+            <div class="row vertical-gap">
+                {% from "macros/portfolio.html" import portfolio2 %}
+                <div class="col-12 col-md-6 col-lg-4">
+                    {{ portfolio2('product-1-sm', 'Quantial – Moving Upon Signs Moveth Lesser', 'single-documentation.html') }}
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    {{ portfolio2('product-2-sm', 'Sensific – Saying Beast Lesser for in Fruitful', 'single-documentation.html') }}
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    {{ portfolio2('product-3-sm', 'Minist – Subdue Above for Signs Dry is Have Great', 'single-documentation.html') }}
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    {{ portfolio2('product-4-sm', 'Desty – She\'d Under Light Over Multiply Stars Winged', 'single-documentation.html') }}
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    {{ portfolio2('product-5-sm', 'Silies – Grass Living Fly Subdue After Fruitful', 'single-documentation.html') }}
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    {{ portfolio2('product-6-sm', 'Interra – Evening Were Set Beginning Image That One', 'single-documentation.html') }}
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    {{ portfolio2('product-7-sm', 'Explora – Open Winged Lights Spirit Very Subdue', 'single-documentation.html') }}
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    {{ portfolio2('product-8-sm', 'Thoute – Yielding Land Fill Gathering Midst Second', 'single-documentation.html') }}
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    {{ portfolio2('product-9-sm', 'Accountry – Saying Gathering Image Above Dominion', 'single-documentation.html') }}
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    {{ portfolio2('product-10-sm', 'Mained – Third Lights Greater Were Morning', 'single-documentation.html') }}
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    {{ portfolio2('product-11-sm', 'Treate – Blessed Which Give May Make Life Sea Days', 'single-documentation.html') }}
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    {{ portfolio2('product-12-sm', 'Priety – Living Given Night a in Itself Lesser Fowl', 'single-documentation.html') }}
+                </div>
+            </div>
+            <div class="text-center mt-70">
+                <a href="#" class="dx-btn dx-btn-grey dx-btn-lg dx-btn-load" data-btn-loaded="all products shown">Load More</a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

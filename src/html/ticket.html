@@ -1,0 +1,74 @@
+{% set header_title = 'Ticket' %}
+{% extends 'layouts/layout-1.html' %}
+{% set navbar_sticky = true %}
+{% set navbar_expand_lg = true %}
+
+{% block content %}
+
+<header class="dx-header dx-box-1">
+    <div class="container">
+        <div class="bg-image bg-image-parallax">
+            <img src="assets/images/bg-header-4.png" class="jarallax-img" alt="">
+            <div style="background-color: rgba(27, 27, 27, .8);"></div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-xl-7">
+                <h1 class="h2 mb-30 text-white text-center">How can we help you?</h1>
+                <form action="#" class="dx-form dx-form-group-inputs">
+                    <input type="text" name="" value="" class="form-control" placeholder="Keyword search...">
+                    <button class="dx-btn dx-btn-lg">Search</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="dx-box bg-white">
+    <div class="container">
+        <ul class="dx-links text-center">
+            <li><a href="help-center.html">Support Home</a></li>
+            <li><a href="documentations.html">Documentations</a></li>
+            <li><a href="articles.html">Knowledge Base</a></li>
+            <li><a href="forums.html">Forums</a></li>
+            <li class="active"><a href="ticket.html">Ticket System</a></li>
+        </ul>
+    </div>
+</div>
+<div class="dx-separator"></div>
+
+<div class="dx-box-5 bg-grey-6">
+    <div class="container">
+        <div class="row align-items-center justify-content-between vertical-gap mnt-30 sm-gap mb-50">
+            <div class="col-auto">
+                <h2 class="h4 mb-0 mt-0">Your Tickets</h2>
+            </div>
+            <div class="col pl-30 pr-30 d-none d-sm-block">
+                <div class="dx-separator ml-10 mr-10"></div>
+            </div>
+            <div class="col-auto">
+                <a href="ticket-submit.html" class="dx-btn dx-btn-md">Submit a ticket</a>
+            </div>
+        </div>
+
+        {% from "macros/ticket.html" import ticket %}
+        {{ ticket("avatar-1.png", "single-ticket.html", "Open", "dx-ticket-new dx-ticket-open", "John Leonard", "Need help with customization. Some options are not appearing...", ["Update: 5 Nov 2018", "Product: Quantial", "Comments: 2"]) }}
+        {{ ticket("avatar-default.svg", "single-ticket.html", "Closed", "dx-ticket-closed", "Bruno Rice", "Theme not updating in downloads", ["Update: 4 Nov 2018", "Product: Sensific", "Comments: 11"]) }}
+    </div>
+</div>
+<div class="dx-separator"></div>
+
+<div class="dx-box-5 pb-100">
+    <div class="container mt-4 mnb-7">
+        <div class="row align-items-center justify-content-between vertical-gap mnt-30 sm-gap mb-50">
+            <h2 class="col-auto h4 mb-0 mt-0">Featured Articles</h2>
+            <div class="col pl-30 pr-30 d-none d-sm-block">
+                <div class="dx-separator ml-10 mr-10"></div>
+            </div>
+            <div class="col-auto dx-slider-arrows-clone"></div>
+        </div>
+        {% include "shared/page-slider-featuredArticles.html" %}
+    </div>
+</div>
+
+{% endblock %}

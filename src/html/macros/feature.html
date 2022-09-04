@@ -1,0 +1,36 @@
+{% macro feature(icon="", title="", text="", style="") %}
+<div class="dx-feature dx-feature-1">
+    <div class="dx-feature-decorated"></div>
+    <div class="dx-feature-icon">
+        <span class="icon {{ icon }}"></span>
+    </div>
+    <div class="dx-feature-cont">
+        <div class="dx-feature-title">{{ title }}</div>
+        <div class="dx-feature-text">{{ text }}</div>
+    </div>
+</div>
+{% endmacro %}
+{% macro feature2(icon="", title="", text="", style="") %}
+<div class="dx-feature dx-feature-2{{ ' dx-feature-white' if style }}">
+    <div class="dx-feature-cont">
+        <div class="dx-feature-icon">
+            <span class="icon {{ icon }}"></span>
+        </div>
+        <div class="dx-feature-title">{{ title }}</div>
+        <div class="dx-feature-text">{{ text }}</div>
+    </div>
+    <span class="dx-decorated" style="background-image: url('assets/images/decorated-pattern-dark.svg');"></span>
+</div>
+{% endmacro %}
+{% macro feature3(icon="", title="", text="", link="", color="") %}
+<div class="dx-feature dx-feature-3 dx-feature-color-{{ color }} dx-block-decorated">
+    <div class="dx-feature-icon">
+        <span class="icon {{ icon }}"></span>
+    </div>
+    <div class="dx-feature-cont">
+        <div class="dx-feature-title"><a href="{{ link }}">{{ title }}</a></div>
+        <div class="dx-feature-text">{{ text }}</div>
+        <a href="{{ link }}" class="dx-btn dx-btn-link d-flex dx-feature-link">Read More <span class="icon pe-7s-angle-right"></span></a>
+    </div>
+</div>
+{% endmacro %}

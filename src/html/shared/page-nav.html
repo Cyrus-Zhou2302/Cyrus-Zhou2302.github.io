@@ -1,0 +1,176 @@
+{% macro submenu(nav) -%}
+    {% for file, item in nav %}
+        <li{% if isActiveMenuItem(file, item, filename) or item.mega or item.sub %} class="dx-nav-item{{ ' dx-nav-item-drop' if item.sub }}{{ ' active' if isActiveMenuItem(file, item, filename) }}{{ ' dx-navbar-dropdown-dark' if nav_dropdown_dark }}"{% endif %}>
+            <a class="dx-nav-link" href="{{file | safe}}">
+                {{item.name | safe}}
+            </a>
+            {%- if item.sub -%}
+                <ul class="dx-navbar-dropdown{{ ' dx-navbar-dropdown-dark' if nav_dropdown_dark }}">
+                    {{ submenu(item.sub) }}
+                    <div class="dx-navbar-dropdown-triangle"></div>
+                </ul>
+            {%- endif %}
+        </li>
+    {%- endfor %}
+{%- endmacro %}
+
+
+<!--
+    START: Navbar
+
+    Additional Classes:
+        .dx-navbar-sticky || .dx-navbar-fixed
+        .dx-navbar-autohide
+        .dx-navbar-dropdown-triangle
+        .dx-navbar-dropdown-dark - only <ul>
+        .dx-navbar-expand || .dx-navbar-expand-lg || .dx-navbar-expand-xl
+-->
+<nav class="dx-navbar dx-navbar-top dx-navbar-collapse{{ ' dx-navbar-sticky' if navbar_sticky }}{{ ' dx-navbar-fixed' if navbar_fixed }}{{ ' dx-navbar-expand' if navbar_expand }}{{ ' dx-navbar-expand-lg' if navbar_expand_lg }}{{ ' dx-navbar-expand-xl' if navbar_expand_xl }}{{ ' dx-navbar-dropdown-triangle' if nav_dropdown_triangle }}{{ ' dx-navbar-autohide' if nav_autohide }}">
+    <div class="container{{ '-fluid' if navbar_container_fluid }}">
+        {% if nav_logo_img %}
+        <a href="{{ nav_logo_url }}" class="dx-nav-logo">
+            <img src="{{ nav_logo_path }}" alt="" width="{{ nav_logo_width }}">
+        </a>
+        {% else %}
+        <a href="{{ nav_logo_url }}" class="dx-nav-logo">{{ nav_logo }}</a>
+        {% endif %}
+
+        <button class="dx-navbar-burger">
+            <span></span><span></span><span></span>
+        </button>
+
+        <div class="dx-navbar-content">
+            {% if nav_align %}
+            <ul class="dx-nav">
+                {{ submenu(navigation) }}
+            </ul>
+            {% endif %}
+            <ul class="dx-nav dx-nav-align-right">
+                <li class="dx-nav-item dx-nav-item-drop">
+                    <a class="dx-nav-icon" href="#" role="button">
+                        <span class="dx-nav-badge">2</span>
+                        <img class="icon" width="22" src="assets/images/icon-bag.svg">
+                    </a>
+                    <div class="dx-navbar-dropdown dx-navbar-dropdown-left dx-dropdown-checkout{{ ' dx-navbar-dropdown-dark' if nav_dropdown_dark }}">
+                        <div class="dx-navbar-dropdown-triangle"></div>
+
+                        <table class="dx-table dx-table-checkout">
+                            <tbody>
+                                <tr>
+                                    <th scope="row" class="dx-table-checkout-img">
+                                        <a href="product.html"><img src="assets/images/product-1-sm.png" alt=""></a>
+                                    </th>
+                                    <td class="dx-table-checkout-title">
+                                        <a href="product.html">Sensific – Saying Beast Lesser for in Fruitful</a>
+                                    </td>
+                                    <td class="dx-table-checkout-price">
+                                        <div class="dx-table-checkout-price">$59</div>
+                                    </td>
+                                    <td class="dx-table-checkout-delete">
+                                        <a href="#"><span class="icon pe-7s-close"></span></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="dx-table-checkout-img">
+                                        <a href="product.html"><img src="assets/images/product-2-sm.png" alt=""></a>
+                                    </th>
+                                    <td class="dx-table-checkout-title">
+                                        <a href="product.html">Minist – Subdue Above for Signs Dry is Have Great</a>
+                                    </td>
+                                    <td class="dx-table-checkout-price">
+                                        <div class="dx-table-checkout-price">$39</div>
+                                    </td>
+                                    <td class="dx-table-checkout-delete">
+                                        <a href="#"><span class="icon pe-7s-close"></span></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="d-flex justify-content-between dx-box-content pt-0 pb-0 mt-15 mnb-6">
+                            <span>Total Payment:</span><span><strong>$98</strong></span>
+                        </div>
+                        <div class="dx-box-content">
+                            <a href="checkout.html" class="dx-btn dx-btn-md dx-btn-block">Checkout</a>
+                        </div>
+                    </div>
+                </li>
+                {% if navbar_signin %}
+                <li class="dx-nav-item dx-nav-item-drop">
+                    <a class="dx-nav-signin" href="account.html" role="button">
+                        <span class="dx-nav-signin-img"><img src="assets/images/avatar-1.png" alt=""></span>
+                        <span class="dx-nav-signin-name">John Leonard</span>
+                    </a>
+                    <ul class="dx-navbar-dropdown dx-dropdown-signin{{ ' dx-navbar-dropdown-dark' if nav_dropdown_dark }}">
+                        <div class="dx-navbar-dropdown-triangle"></div>
+                        <li class="dx-nav-item">
+                            <a href="account.html" class="dx-nav-link"><span class="icon pe-7s-user"></span> Account</a>
+                        </li>
+                        <li class="dx-nav-item">
+                            <a href="account-licenses.html" class="dx-nav-link"><span class="icon pe-7s-download"></span> Items & Licenses</a>
+                        </li>
+                        <li class="dx-nav-item">
+                            <a href="account-settings.html" class="dx-nav-link"><span class="icon pe-7s-config"></span> Settings</a>
+                        </li>
+                        <li class="dx-nav-item">
+                            <a href="#" class="dx-nav-link"><span class="icon pe-7s-back"></span> Logout</a>
+                        </li>
+                    </ul>
+                </li>
+                {% else %}
+                <li class="dx-nav-item">
+                    <a class="dx-nav-link" data-fancybox data-touch="false" data-close-existing="true" data-src="#login" href="javascript:;">Log In</a>
+                </li>
+                <li class="dx-nav-item">
+                    <span><a data-fancybox data-touch="false" data-close-existing="true" data-src="#signup" href="javascript:;" class="dx-btn dx-btn-md dx-btn-transparent">Sign Up</a></span>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="dx-navbar dx-navbar-fullscreen">
+    <div class="container">
+        <button class="dx-navbar-burger">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="dx-navbar-content">
+            {% if nav_align %}
+            <ul class="dx-nav dx-nav-align-{{ nav_align }}">
+                {{ submenu(navigation) }}
+            </ul>
+            {% endif %}
+            <ul class="dx-nav dx-nav-align-right{{ ' justify-content-between' if navbar_signin }}">
+                {% if navbar_signin %}
+                <li>
+                    <span>
+                        <a class="dx-nav-signin" href="account.html">
+                            <span class="dx-nav-signin-img"><img src="assets/images/avatar-1.png" alt=""></span>
+                            <span class="dx-nav-signin-name">John Leonard</span>
+                        </a>
+                    </span>
+                </li>
+                <li>
+                    <a class="dx-nav-icon mnt-8" href="checkout.html">
+                        <span class="dx-nav-badge">2</span>
+                        <span class="icon dx-icon-bag"></span>
+                    </a>
+                </li>
+                {% else %}
+                <li>
+                    <a class="dx-nav-icon" href="checkout.html">
+                        <span class="dx-nav-badge">2</span>
+                        <span class="icon dx-icon-bag"></span>
+                    </a>
+                </li>
+                <li>
+                    <a data-fancybox data-touch="false" data-close-existing="true" data-src="#login" href="javascript:;">Log In</a>
+                </li>
+                <li>
+                    <span><a data-fancybox data-touch="false" data-close-existing="true" data-src="#signup" href="javascript:;" class="dx-btn dx-btn-md dx-btn-transparent">Sign Up</a></span>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- END: Navbar -->

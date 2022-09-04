@@ -1,0 +1,20 @@
+{% macro articleList(title="", quantity="", link="", article="", linkItem="") %}
+<div class="dx-article dx-article-list">
+    <h3 class="h6 dx-article-title">{{ title }}</h3>
+    <ul class="dx-list">
+        {% for article, linkItem in article %}
+        <li><a href="{{ linkItem }}">{{ article }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="{{ link }}" class="dx-btn dx-btn-xs dx-btn-grey-1 dx-article-btn">{{ quantity }} Articles</a>
+</div>
+{% endmacro %}
+{% macro articleBlock(link="", title="", text="") %}
+<div class="dx-article dx-article-block">
+    <h4 class="h6 dx-article-title"><a href="{{ link }}">{{ title }}</a></h4>
+    <div class="dx-article-text">
+        <p class="mb-0">{{ text }}</p>
+    </div>
+    <a href="{{ link }}" class="dx-btn dx-btn-link d-flex dx-article-link">Read More <span class="icon pe-7s-angle-right"></span></a>
+</div>
+{% endmacro %}

@@ -1,0 +1,27 @@
+{% macro portfolio(img="", link="", title="", price="", filter="") %}
+<div class="dx-portfolio-item dx-block-decorated">
+    <div class="dx-portfolio-item-image">
+        <div class="dx-portfolio-item-overlay" style="background-color: rgba(27, 27, 27, .8);">
+            <a href="{{ link }}" class="dx-btn dx-btn-md dx-btn-transparent-style-2 m-10">Live Demo</a>
+            <a href="{{ link }}" class="dx-btn dx-btn-md dx-btn-transparent-style-2 m-10">Buy Now</a>
+        </div>
+        <img src="assets/images/{{ img }}.png" alt="">
+    </div>
+    <a href="product.html" class="dx-portfolio-item-info">
+        <span class="dx-portfolio-item-title">{{ title }}</span>
+        {% if price === 'Free' %}
+        <span class="dx-portfolio-item-price">{{ price }}</span>
+        {% else %}
+        <span class="dx-portfolio-item-price">${{ price }}</span>
+        {% endif %}
+    </a>
+</div>
+{% endmacro %}
+{% macro portfolio2(img="", title="", link="") %}
+<a href="{{ link }}" class="dx-portfolio-item dx-portfolio-item-style-2 dx-block-decorated">
+    <span class="dx-portfolio-item-img">
+        <img src="assets/images/{{ img }}.png" alt="">
+    </span>
+    <span class="dx-portfolio-item-title">{{ title }}</span>
+</a>
+{% endmacro %}

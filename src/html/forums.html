@@ -1,0 +1,146 @@
+{% set header_title = 'Forums' %}
+{% extends 'layouts/layout-1.html' %}
+{% set navbar_sticky = true %}
+{% set navbar_expand_lg = true %}
+
+{% block content %}
+
+<header class="dx-header dx-box-1">
+    <div class="container">
+        <div class="bg-image bg-image-parallax">
+            <img src="assets/images/bg-header-4.png" class="jarallax-img" alt="">
+            <div style="background-color: rgba(27, 27, 27, .8);"></div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-xl-7">
+                <h1 class="h2 mb-30 text-white text-center">How can we help you?</h1>
+                <form action="#" class="dx-form dx-form-group-inputs">
+                    <input type="text" name="" value="" class="form-control" placeholder="Keyword search...">
+                    <button class="dx-btn dx-btn-lg">Search</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="dx-box bg-white">
+    <div class="container">
+        <ul class="dx-links text-center">
+            <li><a href="help-center.html">Support Home</a></li>
+            <li><a href="documentations.html">Documentations</a></li>
+            <li><a href="articles.html">Knowledge Base</a></li>
+            <li class="active"><a href="forums.html">Forums</a></li>
+            <li><a href="ticket.html">Ticket System</a></li>
+        </ul>
+    </div>
+</div>
+<div class="dx-separator"></div>
+
+<div class="dx-box-5 pb-100 bg-grey-6">
+    <div class="container">
+        <div class="row vertical-gap md-gap">
+            <div class="col-lg-8">
+                <div class="dx-box dx-box-decorated">
+                    <div class="dx-blog-post">
+                        <div class="dx-blog-post-box pt-30 pb-30">
+                            <h2 class="h4 mnt-5 mb-9">Forums</h2>
+                            {% from "macros/breadcrumbs.html" import breadcrumbs %}
+                            {{ breadcrumbs('text-left dx-breadcrumbs-dark mnb-6 fs-14', [['help-center', 'Support Home', 'Forums']]) }}
+                        </div>
+                        <div class="table-responsive">
+                            <table class="dx-table dx-table-default">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Forums</th>
+                                        <th scope="col">Topics</th>
+                                        <th scope="col">Posts</th>
+                                        <th scope="col">Last Post</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">
+                                            <a href="topics.html" class="dx-table-default-title">Design with pleasure</a>
+                                            <p class="mb-0">Sodales pharetra condimentum. Curabitur hendrerit odio, ad libero tempus dis duis suspendisse euismod.</p>
+                                        </th>
+                                        <td>45</td>
+                                        <td>367</td>
+                                        <td class="dx-table-lastPost">
+                                            <div class="dx-table-default-info">
+                                                <p class="mb-0">by <a href="#">Joseph Harper</a><span class="dib">24 Feb 2018,</span> <span class="dib">09:00 am</span></p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <a href="topics.html" class="dx-table-default-title">Web Design Jobs & Developer Jobs</a>
+                                            <p class="mb-0">Mattis nonummy massa aliquam ad pretium. Ipsum mi litora penatibus.</p>
+                                        </th>
+                                        <td>12</td>
+                                        <td>206</td>
+                                        <td class="dx-table-lastPost">
+                                            <div class="dx-table-default-info">
+                                                <p class="mb-0">by <a href="#">Paul Shaw</a><span class="dib">23 Feb 2018,</span> <span class="dib">11:02 am</span></p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <a href="topics.html" class="dx-table-default-title">Group Testing</a>
+                                            <p class="mb-0">Testing.</p>
+                                        </th>
+                                        <td>05</td>
+                                        <td>98</td>
+                                        <td class="dx-table-lastPost">
+                                            <div class="dx-table-default-info">
+                                                <p class="mb-0">by <a href="#">Gramziu</a><span class="dib">22 Feb 2018,</span> <span class="dib">10:24 am</span></p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <a href="topics.html" class="dx-table-default-title">Upcomming Features</a>
+                                            <p class="mb-0">Vel dui sapien condimentum sodales pretium nostra parturient. Pulvinar odio.</p>
+                                        </th>
+                                        <td>91</td>
+                                        <td>614</td>
+                                        <td class="dx-table-lastPost">
+                                            <div class="dx-table-default-info">
+                                                <p class="mb-0">by <a href="#">Mary Cain</a><span class="dib">20 Feb 2018,</span> <span class="dib">10:42 am</span></p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <a href="topics.html" class="dx-table-default-title">Web Designer Forum News</a>
+                                            <p class="mb-0">Iaculis libero neque. Sociosqu pretium nisi blandit consequat posuere leo.</p>
+                                        </th>
+                                        <td>08</td>
+                                        <td>37</td>
+                                        <td class="dx-table-lastPost">
+                                            <div class="dx-table-default-info">
+                                                <p class="mb-0">by <a href="#">Robert Holmes</a><span class="dib">19 Feb 2018,</span> <span class="dib">8:59 am</span></p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="dx-sticky dx-sidebar" data-sticky-offsetTop="120" data-sticky-offsetBot="40">
+                    {% from "macros/widgets.html" import subscribe, search, latestArticles, latestForums %}
+                    {{ subscribe('') }}
+                    {{ search('') }}
+                    {{ latestArticles('') }}
+                    {{ latestForums('') }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

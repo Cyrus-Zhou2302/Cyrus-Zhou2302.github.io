@@ -1,0 +1,88 @@
+.dx-pagination {
+    display: inline-flex;
+    align-items: center;
+    padding: 0;
+    margin: 0 -5px;
+
+    .dx-pagination-space {
+        margin: 0 10px;
+        font-weight: 600;
+
+        @media screen and #{$media_sm} {
+            display: none;
+        }
+    }
+
+    .dx-pagination-icon {
+        a {
+            @media screen and #{$media_xs} {
+                min-width: auto;
+                padding: 0;
+                background: none;
+                box-shadow: none;
+            }
+        }
+
+        .icon {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            width: 10px;
+            font-size: 1.5rem;
+
+            @media screen and #{$media_xs} {
+                top: 1px;
+            }
+        }
+    }
+
+    > li {
+        display: inline-block;
+        padding: 0 5px;
+
+        &.active a {
+            color: #fff;
+            background-color: $color_main_1;
+            box-shadow: none;
+
+            &:hover,
+            &.hover,
+            &:focus,
+            &.focus {
+                color: #fff;
+                background-color: darken($color_main_1, 10%);
+                box-shadow: none;
+            }
+        }
+
+        a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 40px;
+            height: 40px;
+            padding: 10px;
+            font-size: .875rem;
+            color: $color_grey_2;
+            background-color: #fff;
+            border-radius: 3px;
+            box-shadow: inset 0 0 0 1px rgba(lighten($color_grey_3, 17%), .8);
+            transition: color .15s ease-in-out, box-shadow .15s ease-in-out, background-color .15s ease-in-out;
+
+            @media screen and #{$media_xs} {
+                min-width: 30px;
+                height: 30px;
+                font-size: .75rem;
+            }
+
+            &:hover,
+            &.hover,
+            &:focus,
+            &.focus {
+                color: darken($color_grey_2, 15%);
+                text-decoration: none;
+                box-shadow: inset 0 0 0 1px lighten($color_grey_3, 10%);
+            }
+        }
+    }
+}

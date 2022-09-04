@@ -1,0 +1,31 @@
+.dx-article {
+    .dx-article-list {
+        > li a {
+            color: $color_main_1;
+
+            &:hover,
+            &:focus {
+                color: darken($color_main_1, 15%);
+                text-decoration: none;
+            }
+        }
+    }
+    .dx-article-btn {
+        margin-top: 23px;
+        margin-left: 25px;
+    }
+    .dx-article-link {
+        margin-top: 17px;
+    }
+}
+// Article Block
+.dx-article-block {
+    + .dx-article-block {
+        margin-top: 42px;
+    }
+
+    .dx-article-title {
+        margin-top: -3px;
+        margin-bottom: 14px;
+    }
+}

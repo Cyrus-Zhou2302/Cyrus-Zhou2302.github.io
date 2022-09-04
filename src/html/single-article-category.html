@@ -1,0 +1,75 @@
+{% set header_title = 'Knowledge Base - Single Article Category' %}
+{% extends 'layouts/layout-1.html' %}
+{% set navbar_sticky = true %}
+{% set navbar_expand_lg = true %}
+
+{% block content %}
+
+    <header class="dx-header dx-box-1">
+        <div class="container">
+            <div class="bg-image bg-image-parallax">
+                <img src="assets/images/bg-header-4.png" class="jarallax-img" alt="">
+                <div style="background-color: rgba(27, 27, 27, .8);"></div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-xl-7">
+                    <h1 class="h2 mb-30 text-white text-center">How can we help you?</h1>
+                    <form action="#" class="dx-form dx-form-group-inputs">
+                        <input type="text" name="" value="" class="form-control" placeholder="Keyword search...">
+                        <button class="dx-btn dx-btn-lg">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="dx-box bg-white">
+        <div class="container">
+            <ul class="dx-links text-center">
+                <li><a href="help-center.html">Support Home</a></li>
+                <li><a href="documentations.html">Documentations</a></li>
+                <li class="active"><a href="articles.html">Knowledge Base</a></li>
+                <li><a href="forums.html">Forums</a></li>
+                <li><a href="ticket.html">Ticket System</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="dx-separator"></div>
+    <div class="dx-box-5 pb-100 bg-grey-6">
+        <div class="container">
+            <div class="row vertical-gap md-gap">
+                <div class="col-lg-8">
+                    <div class="dx-box dx-box-decorated">
+                        <div class="dx-blog-post">
+                            <div class="dx-blog-post-box pt-30 pb-30">
+                                <h2 class="h4 mnt-5 mb-8">Quantial</h2>
+                                {% from "macros/breadcrumbs.html" import breadcrumbs %}
+                                {{ breadcrumbs('text-left dx-breadcrumbs-dark mnb-8', [['help-center', 'Support Home'], ['articles', 'Articles', 'Quantial']]) }}
+                            </div>
+                            <div class="dx-separator"></div>
+                            <div class="dx-blog-post-box">
+                                {% from "macros/article.html" import articleBlock %}
+                                {{ articleBlock('single-article.html', 'Make menu dropdown working without JavaScript', "Meat all together sea deep isn't replenish called. One moved cattle bring. Can't of. Itself After shall hath winged. Given stars second whose yielding fourth. Subdue years form saw. Second...") }}
+                                {{ articleBlock('single-article.html', 'Google Analytics', "Likeness seed he may. Brought firmament won't that to. Fowl thing saw behold earth land evening gathering hath after all whales winged. Greater so all two dry. Appear seas fruit...") }}
+                                {{ articleBlock('single-article.html', 'How to manually import Demo data (if you faced with problems in one-click demo import)', "And have make, isn't land herb good lesser won't. Own. Us. Moveth, divided female their won't subdue seas tree creepeth They're morning isn't let so lights. Sixth, first every night...") }}
+                                {{ articleBlock('single-article.html', 'WordPress Themes FAQ', "Us sixth she'd, which creeping fruitful winged. To called made seas of grass creature good upon. Air multiply gathering female saying our set creepeth wherein hath waters from midst man...") }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="dx-sticky dx-sidebar" data-sticky-offsetTop="120" data-sticky-offsetBot="40">
+                        {% from "macros/widgets.html" import subscribe, search, categoriesArticles, latestArticles, latestForums %}
+                        {{ subscribe('') }}
+                        {{ search('') }}
+                        {{ categoriesArticles('') }}
+                        {{ latestArticles('') }}
+                        {{ latestForums('') }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

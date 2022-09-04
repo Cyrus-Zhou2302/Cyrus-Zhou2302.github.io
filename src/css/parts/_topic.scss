@@ -1,0 +1,16 @@
+.dx-topic-comment {
+    padding: 50px;
+
+    + .dx-topic-comment {
+        padding: 50px;
+        margin-top: 0;
+    }
+
+    @media screen and #{$media_md} {
+        padding: 30px;
+
+        + .dx-topic-comment {
+            padding: 30px;
+        }
+    }
+}

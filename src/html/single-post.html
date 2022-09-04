@@ -1,0 +1,215 @@
+{% set header_title = 'The Big Thing in Design' %}
+{% extends 'layouts/layout-1.html' %}
+{% set navbar_sticky = true %}
+{% set navbar_expand_lg = true %}
+
+{% block content %}
+
+<header class="dx-header dx-box-5">
+    <div class="bg-image bg-image-parallax">
+        <img src="assets/images/bg-header-3.png" class="jarallax-img" alt="">
+        <div style="background-color: rgba(27, 27, 27, .8);"></div>
+    </div>
+
+    <div class="container mnb-8">
+        <div class="row justify-content-center">
+            <div class="col-xl-7">
+                <h1 class="h4 mb-10 text-white text-center">The Big Thing in Design</h1>
+                {% from "macros/breadcrumbs.html" import breadcrumbs %}
+                {{ breadcrumbs('text-center', [['index', 'Home'], ['blog', 'Blog', 'The Big Thing in Design']]) }}
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="dx-box-1 pb-100 bg-grey-6">
+    <div class="container">
+        <div class="row vertical-gap md-gap">
+            <div class="col-lg-8">
+                <div class="dx-blog-post dx-box dx-box-decorated">
+                    <div class="dx-gallery pt-10 pr-10 pl-10">
+                        <a href="assets/images/blog-3.png" data-fancybox="images" class="dx-gallery-item">
+                            <span class="dx-gallery-item-overlay"><span class="icon pe-7s-exapnd2"></span></span>
+                            <img src="assets/images/blog-3.png" class="dx-img" alt="">
+                        </a>
+                    </div>
+                    <div class="dx-blog-post-box">
+                        <h1 class="h3 dx-blog-post-title"><a href="single-post.html">The Big Thing in Design</a></h1>
+                        <ul class="dx-blog-post-info">
+                            <li>Date: 25 Sep 2018</li>
+                            <li>Views: 124</li>
+                            <li>Category:
+                                <ul class="dx-blog-post-categories">
+                                    <li><a href="#">News</a></li>
+                                </ul>
+                            </li>
+                            <li>Author: <a href="#">John</a></li>
+                        </ul>
+                        <p class="mnb-2">Hath without winged from creature won't the seas midst without every gathering place is beast and, unto, and darkness of rule don't third male moving winged is two have deep abundantly wherein. There god fruitful Make appear. Night made Isn't.</p>
+                    </div>
+                    <div class="dx-blog-post-box">
+                        <blockquote class="dx-blockquote mnt-10 mb-0">
+                            Fruit male face green be also darkness meat sixth shall all Fish. Hath creature. Sea all creepeth first which creepeth without gathered us deep.
+                        </blockquote>
+                    </div>
+                    <div class="dx-blog-post-box">
+                        <h2 class="h5 mnt-10">Abundantly, bring wherein?</h2>
+                        <p>Fruit male face green be also darkness meat sixth shall all Fish. Hath creature. Sea all creepeth first which creepeth without gathered us deep.</p>
+                        <div class="dx-gallery">
+                            <div class="row vertical-gap">
+                                <div class="col-6">
+                                    <a href="assets/images/blog-1.png" data-fancybox="images" class="dx-gallery-item">
+                                        <span class="dx-gallery-item-overlay dx-gallery-item-overlay-md"><span class="icon pe-7s-exapnd2"></span></span>
+                                        <img src="assets/images/blog-1-md.png" class="dx-img" alt="">
+                                    </a>
+                                </div>
+                                <div class="col-6">
+                                    <a href="assets/images/blog-2.png" data-fancybox="images" class="dx-gallery-item">
+                                        <span class="dx-gallery-item-overlay dx-gallery-item-overlay-md"><span class="icon pe-7s-exapnd2"></span></span>
+                                        <img src="assets/images/blog-2-md.png" class="dx-img" alt="">
+                                    </a>
+                                </div>
+                                <div class="col-6">
+                                    <a href="assets/images/blog-4.png" data-fancybox="images" class="dx-gallery-item">
+                                        <span class="dx-gallery-item-overlay dx-gallery-item-overlay-md"><span class="icon pe-7s-exapnd2"></span></span>
+                                        <img src="assets/images/blog-4-md.png" class="dx-img" alt="">
+                                    </a>
+                                </div>
+                                <div class="col-6">
+                                    <a href="assets/images/blog-5.png" data-fancybox="images" class="dx-gallery-item">
+                                        <span class="dx-gallery-item-overlay dx-gallery-item-overlay-md"><span class="icon pe-7s-exapnd2"></span></span>
+                                        <img src="assets/images/blog-5-md.png" class="dx-img" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dx-blog-post-box">
+                        <h2 class="h5 mnt-4">Theme Options</h2>
+                        <p>Great saying. Third is meat green isn't grass sixth creeping:</p>
+                        <ul class="dx-blog-post-list mnb-7">
+                            <li>Theme Style</li>
+                            <li>Fonts</li>
+                            <li>Navigation</li>
+                            <li>Single Page</li>
+                            <li>Single Post</li>
+                            <li>Single Match</li>
+                            <li>Posts Archive</li>
+                            <li>WooCommerce</li>
+                            <li>bbPress</li>
+                            <li>BuddyPress</li>
+                            <li>Search Page</li>
+                            <li>404</li>
+                            <li>Footer</li>
+                            <li>Twitter</li>
+                            <li>Instagram</li>
+                            <li>Maintenance</li>
+                        </ul>
+                    </div>
+                    <div class="dx-separator"></div>
+                    <div class="dx-blog-post-box pt-30 pb-30">
+                        <ul class="dx-blog-post-tags mnt-6 mnb-1 db">
+                            <li class="dx-blog-post-tags-title">Tags:</li>
+                            <li><a href="#">Branding</a></li>
+                            <li><a href="#">Design</a></li>
+                            <li><a href="#">People</a></li>
+                        </ul>
+                        <ul class="dx-social-links dx-social-links-style-2 mt-15">
+                            <li>
+                                <a href="#" class="dx-social-twitter"><span class="icon fab fa-twitter"></span> Twitter</a>
+                            </li>
+                            <li>
+                                <a href="#" class="dx-social-facebook"><span class="icon fab fa-facebook"></span> Facebook</a>
+                            </li>
+                            <li>
+                                <a href="#" class="dx-social-google"><span class="icon fab fa-google"></span> Google</a>
+                            </li>
+                            <li>
+                                <a href="#" class="dx-social-pinterest"><span class="icon fab fa-pinterest"></span> Pinterest</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dx-box mt-55">
+                    <h2 class="h4 mb-45">Comments:</h2>
+
+                    <div class="dx-comment">
+                        <div>
+                            <div class="dx-comment-img">
+                                <img src="assets/images/avatar-1.png" alt="">
+                            </div>
+                            <div class="dx-comment-cont">
+                                <a href="#" class="dx-comment-name">John Leonard</a>
+                                <a href="#" class="dx-comment-reply">Reply</a>
+                                <div class="dx-comment-text">
+                                    <p class="mb-0">Nullam ac dui et purus malesuada gravida id fermentum orci. In eu ipsum quis urna hendrerit condimentum vitae a mauris. In congue turpis purus, vitae tempus ante id. Donec orci arcu, sagittis ut finibus vitae.</p>
+                                </div>
+                                <div class="dx-comment-date">12 Feb 2018 7:40 pm</div>
+                            </div>
+                        </div>
+                        <div class="dx-comment">
+                            <div>
+                                <div class="dx-comment-img">
+                                    <img src="assets/images/avatar-2.png" alt="">
+                                </div>
+                                <div class="dx-comment-cont">
+                                    <a href="#" class="dx-comment-name">Mercy Shields</a>
+                                    <a href="#" class="dx-comment-reply">Reply</a>
+                                    <div class="dx-comment-text">
+                                        <p class="mb-0">In at nunc sodales lorem blandit egestas. Suspendisse molestie fringilla purus, eget sagittis nunc ornare sit amet. Praesent vitae ligula eu massa rutrum hendrerit non facilisis nulla interdum ut.</p>
+                                    </div>
+                                    <div class="dx-comment-date">14 Feb 2018 8:29 am</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dx-comment">
+                        <div>
+                            <div class="dx-comment-img">
+                                <img src="assets/images/avatar-3.png" alt="">
+                            </div>
+                            <div class="dx-comment-cont">
+                                <a href="#" class="dx-comment-name">Maria Anthony</a>
+                                <a href="#" class="dx-comment-reply">Reply</a>
+                                <div class="dx-comment-text">
+                                    <p class="mb-0">Donec libero sapien, dapibus id blandit sit amet, iaculis sed ligula. Morbi cursus maximus elementum. Phasellus viverra lacinia sapien sagittis tristique.</p>
+                                </div>
+                                <div class="dx-comment-date">18 Feb 2018 7:13 pm</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form action="#" class="dx-form mt-50">
+                        <div class="row vertical-gap">
+                            <div class="col-md-6">
+                                <input class="form-control form-control-style-3" type="text" placeholder="Name">
+                            </div>
+                            <div class="col-md-6">
+                                <input class="form-control form-control-style-3" type="text" placeholder="Name">
+                            </div>
+                            <div class="col-12">
+                                <textarea class="form-control form-control-style-3" name="name" rows="8" cols="80" placeholder="Comment..."></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button type="button" name="button" class="dx-btn dx-btn-lg">Post a comment</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="dx-sticky dx-sidebar" data-sticky-offsetTop="120" data-sticky-offsetBot="40">
+                    {% from "macros/widgets.html" import subscribe, search, categories, latestPosts, tags, twitter %}
+                    {{ subscribe('') }}
+                    {{ search('') }}
+                    {{ categories('') }}
+                    {{ latestPosts('') }}
+                    {{ tags('') }}
+                    {{ twitter('') }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

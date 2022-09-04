@@ -1,0 +1,54 @@
+.dx-editor-quill {
+    .dx-editor {
+        display: flex;
+        align-items: stretch;
+        padding: 12px 0 12px 18px;
+
+        .ql-editor {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .ql-toolbar {
+        min-height: 54px;
+        padding: 12px 10px;
+        background-color: rgba(lighten($color_grey_3, 24%), .8);
+        border-color: rgba(lighten($color_grey_3, 17%), .8);
+        border-radius: 3px 3px 0 0;
+    }
+    .ql-container {
+        background-color: rgba(lighten($color_grey_3, 24%), .8);
+        border-color: rgba(lighten($color_grey_3, 17%), .8);
+        border-radius: 0 0 3px 3px;
+
+        .ql-editor {
+            padding: 0 18px 0 0;
+            font-family: $font_body;
+            font-size: 1rem;
+            color: rgba($color_grey_1, .8);
+            transition: color .2s ease-in-out;
+
+            &::-webkit-scrollbar-track {
+                background-color: rgba(lighten($color_grey_3, 24%), .8);
+            }
+            &::-webkit-scrollbar {
+                width: 6px;
+                background-color: rgba(lighten($color_grey_3, 24%), .8);
+            }
+            &::-webkit-scrollbar-thumb {
+                background-color: rgba($color_grey_3, .6);
+                border-radius: 3px;
+
+                &:hover {
+                    background-color: $color_grey_3;
+                }
+            }
+
+            &:focus,
+            &.focus {
+                color: darken($color_grey_1, 10%);
+            }
+        }
+    }
+}

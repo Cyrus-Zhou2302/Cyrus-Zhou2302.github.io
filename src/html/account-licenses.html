@@ -1,0 +1,95 @@
+{% set header_title = 'Licenses' %}
+{% extends 'layouts/layout-1.html' %}
+{% set navbar_signin = true %}
+{% set navbar_sticky = true %}
+{% set navbar_expand_lg = true %}
+
+{% block content %}
+
+<header class="dx-header dx-box-5">
+    <div class="container">
+        <div class="bg-image bg-image-parallax">
+            <img src="assets/images/bg-header-5.png" class="jarallax-img" alt="">
+            <div style="background-color: rgba(27, 27, 27, .8);"></div>
+        </div>
+
+        <div class="container mnb-8">
+            <h1 class="h4 mb-10 text-white text-center">Items & Licenses</h1>
+            {% from "macros/breadcrumbs.html" import breadcrumbs %}
+            {{ breadcrumbs('text-center', [['index', 'Home', 'Items & Licenses']]) }}
+        </div>
+    </div>
+</header>
+
+<div class="dx-box-5 pb-100 bg-grey-6">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-10">
+                <div class="dx-box-decorated">
+                    <div class="table-responsive">
+                        <table class="dx-table dx-table-default">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Item</th>
+                                    <th scope="col">License Key</th>
+                                    <th scope="col">License</th>
+                                    <th scope="col">Website</th>
+                                    <th scope="col">Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row" class="dx-table-default-product">
+                                        <a href="product.html">Quantial – Moving Upon Signs Moveth Lesser</a>
+                                    </th>
+                                    <td class="dx-table-licenseKey">98vbjy-t46879ug-fd9iytvh-578g0-8ubfyj00</td>
+                                    <td>Standard</td>
+                                    <td class="dx-table-website dx-table-default-website"><a href="#">https://example.info/</a></td>
+                                    <td>21.07.2018</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="dx-table-default-product">
+                                        <a href="product.html">Sensific – Saying Beast Lesser for in Fruitful</a>
+                                    </th>
+                                    <td class="dx-table-licenseKey">98vbjy-t46879ug-fd9iytvh-578g0-8ubfyj00</td>
+                                    <td>Extended</td>
+                                    <td class="dx-table-website dx-table-default-website">Not activated</td>
+                                    <td>18.07.2018</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="dx-table-default-product">
+                                        <a href="product.html">Minist – Subdue Above for Signs Dry is Have Great</a>
+                                    </th>
+                                    <td class="dx-table-licenseKey">98vbjy-t46879ug-fd9iytvh-578g0-8ubfyj00</td>
+                                    <td>Standard</td>
+                                    <td class="dx-table-website dx-table-default-website"><a href="#" class="dx-btn dx-btn-md dx-btn-grey-2">Deactivate</a></td>
+                                    <td>18.07.2018</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="dx-table-default-product">
+                                        <a href="product.html">Desty – She'd Under Light Over Multiply Stars Winged</a>
+                                    </th>
+                                    <td class="dx-table-licenseKey">98vbjy-t46879ug-fd9iytvh-578g0-8ubfyj00</td>
+                                    <td>Extended</td>
+                                    <td class="dx-table-website dx-table-default-website">Not activated</td>
+                                    <td>15.07.2018</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="dx-table-default-product">
+                                        <a href="product.html">Silies – Grass Living Fly Subdue After Fruitful</a>
+                                    </th>
+                                    <td class="dx-table-licenseKey">98vbjy-t46879ug-fd9iytvh-578g0-8ubfyj00</td>
+                                    <td>Extended</td>
+                                    <td class="dx-table-website dx-table-default-website">Not activated</td>
+                                    <td>03.07.2018</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

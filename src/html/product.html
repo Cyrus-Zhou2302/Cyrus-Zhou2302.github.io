@@ -1,0 +1,236 @@
+{% set header_title = 'Single Product' %}
+{% extends 'layouts/layout-1.html' %}
+{% set navbar_sticky = true %}
+{% set navbar_expand_lg = true %}
+
+{% block content %}
+
+<header class="dx-header dx-box-5">
+    <div class="bg-image bg-image-parallax">
+        <img src="assets/images/bg-header-2.png" class="jarallax-img" alt="">
+        <div style="background-color: rgba(27, 27, 27, .8);"></div>
+    </div>
+
+    <div class="container mnb-8">
+        <h1 class="h4 mb-10 text-white text-center">Quantial – Moving Upon Signs Moveth Lesser</h1>
+        {% from "macros/breadcrumbs.html" import breadcrumbs %}
+        {{ breadcrumbs('text-center', [['index', 'Home'], ['store', 'Store', 'Quantial – Moving Upon Signs Moveth Lesser']]) }}
+    </div>
+</header>
+
+<div class="dx-box-5 pb-100 bg-grey-6">
+    <div class="container">
+        <div class="row vertical-gap md-gap">
+            <div class="col-lg-8">
+                <div class="dx-box dx-box-decorated">
+                    <div class="dx-gallery p-10">
+                        <a href="assets/images/product-1-lg.png" data-fancybox="images" class="dx-gallery-item">
+                            <span class="dx-gallery-item-overlay"><span class="icon pe-7s-exapnd2"></span></span>
+                            <img src="assets/images/product-1.png" class="dx-img" alt="">
+                        </a>
+                        <!-- START: Slider Gallery
+
+                            {% include "shared/comment-additional-slider.html" %}
+                        -->
+                        <div class="swiper-container dx-slider dx-slider-gallery mt-10"
+                            data-swiper-speed="800"
+                            data-swiper-space="10"
+                            data-swiper-slides="4"
+                            data-swiper-pagination-scrollbar="true">
+
+                            <div class="swiper-wrapper">
+                                {% macro slide(img="") %}
+                                <div class="swiper-slide">
+                                    <a href="assets/images/product-{{ img }}-lg.png" data-fancybox="images" class="dx-gallery-item">
+                                        <span class="dx-gallery-item-overlay dx-gallery-item-overlay-sm"><span class="icon pe-7s-exapnd2"></span></span>
+                                        <img src="assets/images/product-{{ img }}-md.png" alt="">
+                                    </a>
+                                </div>
+                                {% endmacro %}
+                                {{ slide('2') }}{{ slide('3') }}{{ slide('4') }}{{ slide('5') }}{{ slide('6') }}
+                            </div>
+
+                            <div class="swiper-scrollbar"></div>
+                        </div>
+                    </div>
+                    <div class="dx-box-content pt-20 pb-0 d-md-block d-lg-none">
+                        <div class="row vertical-gap xs-gap justify-content-between">
+                            <div class="col col-sm-5 col-md-4">
+                                <a href="checkout.html" class="dx-btn dx-btn-lg dx-btn-block">Buy Now $49</a>
+                            </div>
+                            <div class="col col-sm-5 col-md-4">
+                                <a href="#" class="dx-btn dx-btn-lg dx-btn-dark dx-btn-block">Live Preview</a>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="nav dx-tab mt-35" role="tablist">
+                        <li>
+                            <a class="active" id="description-tab" data-toggle="tab" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+                        </li>
+                        <li>
+                            <a id="changelog-tab" data-toggle="tab" href="#changelog" role="tab" aria-controls="changelog" aria-selected="false">Changelog</a>
+                        </li>
+                        <li>
+                            <a href="documentation.html">Documentation <span class="icon fas fa-external-link-alt"></span></a>
+                        </li>
+                        <li>
+                            <a href="articles.html">Knowledge Base <span class="icon fas fa-external-link-alt"></span></a>
+                        </li>
+                    </ul>
+                    <div class="dx-blog-post">
+                        <div class="dx-blog-post-box">
+                            <div class="tab-content dx-tab-content">
+                                <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
+                                    <p class="mnt-5 mb-40">One after fowl own let over replenish spirit. Created together tree you're given creeping. Image gathered they're meat whose i us rule fish Morning you're wherein. Brought without Image darkness fifth isn't signs may. Divide cattle forth hath living.</p>
+                                    <img src="assets/images/product-2.png" alt="" class="dx-img mb-50">
+
+                                    <h3 class="h5">Features List</h3>
+                                    <ul class="dx-blog-post-list mnb-8">
+                                        <li>Fish he moveth of.</li>
+                                        <li>Forth life. Had give.</li>
+                                        <li>Cattle. Two and second.</li>
+                                        <li>Good make his.</li>
+                                        <li>Our deep great good.</li>
+                                        <li>I you're Meat. Fourth a.</li>
+                                    </ul>
+                                </div>
+                                <div class="tab-pane fade" id="changelog" role="tabpanel" aria-labelledby="changelog-tab">
+                                    <div class="dx-changelog mt-4">
+                                        <div class="h5">Ver 1.1.0 - 9 Oct 2018</div>
+                                        <ul>
+                                            <li class="dx-changelog-fix"><span class="dx-changelog-badge">Fix</span>Divided living signs, our wherein cattle. Air moving herb</li>
+                                            <li class="dx-changelog-add"><span class="dx-changelog-badge">Add</span>Bring can't You'll fourth forth forth. Fowl man earth</li>
+                                            <li class="dx-changelog-add"><span class="dx-changelog-badge">Add</span>Make over whales forth third living creeping all greater god</li>
+                                            <li class="dx-changelog-imp"><span class="dx-changelog-badge">Imp</span>So isn't after divide fly to</li>
+                                            <li class="dx-changelog-del"><span class="dx-changelog-badge">Del</span>She'd. Their green greater very face seas were years let</li>
+                                        </ul>
+                                    </div>
+                                    <div class="dx-changelog">
+                                        <div class="h5">Ver 1.0.1 - 17 Sep 2018</div>
+                                        <ul>
+                                            <li class="dx-changelog-fix"><span class="dx-changelog-badge">Fix</span>I every years his fill spirit. You. Days his deep</li>
+                                        </ul>
+                                    </div>
+                                    <div class="dx-changelog">
+                                        <div class="h5">Ver 1.0.0 - 11 Sep 2018</div>
+                                        <ul>
+                                            <li class="dx-changelog-up"><span class="dx-changelog-badge">Up</span>Fifth years air thing second day Fruit so give give</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dx-separator"></div>
+                        <div class="dx-blog-post-box pt-30 pb-30">
+                            <ul class="dx-blog-post-info mnt-15 mnb-1">
+                                <li>Date: 11 Sep 2018</li>
+                                <li>Views: 163</li>
+                            </ul>
+                            <ul class="dx-social-links dx-social-links-style-2 mt-15">
+                                <li>
+                                    <a href="#" class="dx-social-twitter"><span class="icon fab fa-twitter"></span> Twitter</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="dx-social-facebook"><span class="icon fab fa-facebook"></span> Facebook</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="dx-social-google"><span class="icon fab fa-google"></span> Google</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="dx-social-pinterest"><span class="icon fab fa-pinterest"></span> Pinterest</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="dx-box mt-55">
+                    <h2 class="h4 mb-45">Comments:</h2>
+
+                    <div class="dx-comment">
+                        <div>
+                            <div class="dx-comment-img">
+                                <img src="assets/images/avatar-1.png" alt="">
+                            </div>
+                            <div class="dx-comment-cont">
+                                <a href="#" class="dx-comment-name">John Leonard</a>
+                                <a href="#" class="dx-comment-reply">Reply</a>
+                                <div class="dx-comment-text">
+                                    <p class="mb-0">Nullam ac dui et purus malesuada gravida id fermentum orci. In eu ipsum quis urna hendrerit condimentum vitae a mauris. In congue turpis purus, vitae tempus ante id. Donec orci arcu, sagittis ut finibus vitae.</p>
+                                </div>
+                                <div class="dx-comment-date">12 Feb 2018 7:40 pm</div>
+                            </div>
+                        </div>
+                        <div class="dx-comment">
+                            <div>
+                                <div class="dx-comment-img">
+                                    <img src="assets/images/avatar-2.png" alt="">
+                                </div>
+                                <div class="dx-comment-cont">
+                                    <a href="#" class="dx-comment-name">Mercy Shields</a>
+                                    <a href="#" class="dx-comment-reply">Reply</a>
+                                    <div class="dx-comment-text">
+                                        <p class="mb-0">In at nunc sodales lorem blandit egestas. Suspendisse molestie fringilla purus, eget sagittis nunc ornare sit amet. Praesent vitae ligula eu massa rutrum hendrerit non facilisis nulla interdum ut.</p>
+                                    </div>
+                                    <div class="dx-comment-date">14 Feb 2018 8:29 am</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dx-comment">
+                        <div>
+                            <div class="dx-comment-img">
+                                <img src="assets/images/avatar-3.png" alt="">
+                            </div>
+                            <div class="dx-comment-cont">
+                                <a href="#" class="dx-comment-name">Maria Anthony</a>
+                                <a href="#" class="dx-comment-reply">Reply</a>
+                                <div class="dx-comment-text">
+                                    <p class="mb-0">Donec libero sapien, dapibus id blandit sit amet, iaculis sed ligula. Morbi cursus maximus elementum. Phasellus viverra lacinia sapien sagittis tristique.</p>
+                                </div>
+                                <div class="dx-comment-date">18 Feb 2018 7:13 pm</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form action="#" class="dx-form mt-50">
+                        <div class="row vertical-gap">
+                            <div class="col-md-6">
+                                <input class="form-control form-control-style-3" type="text" placeholder="Name">
+                            </div>
+                            <div class="col-md-6">
+                                <input class="form-control form-control-style-3" type="text" placeholder="Name">
+                            </div>
+                            <div class="col-12">
+                                <textarea class="form-control form-control-style-3" name="name" rows="8" cols="80" placeholder="Comment..."></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button type="button" name="button" class="dx-btn dx-btn-lg">Post a comment</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="dx-sticky dx-sidebar" data-sticky-offsetTop="120" data-sticky-offsetBot="40">
+                    <div class="d-none d-lg-block mb-40">
+                        <div class="row vertical-gap xs-gap justify-content-between">
+                            <div class="col">
+                                <a href="checkout.html" class="dx-btn dx-btn-lg dx-btn-block">Buy Now $49</a>
+                            </div>
+                            <div class="col">
+                                <a href="#" class="dx-btn dx-btn-lg dx-btn-dark dx-btn-block">Live Preview</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% from "macros/widgets.html" import information, products, subscribe, search %}
+                    {{ information('') }}
+                    {{ products('') }}
+                    {{ subscribe('') }}
+                    {{ search('') }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,77 @@
+{% set header_title = 'Account' %}
+{% extends 'layouts/layout-1.html' %}
+{% set navbar_signin = true %}
+{% set navbar_expand_lg = true %}
+{% set navbar_sticky = true %}
+
+{% block content %}
+
+<header class="dx-header dx-box-5">
+    <div class="container">
+        <div class="bg-image bg-image-parallax">
+            <img src="assets/images/bg-header-5.png" class="jarallax-img" alt="">
+            <div style="background-color: rgba(27, 27, 27, .8);"></div>
+        </div>
+
+        <div class="container mnb-8">
+            <h1 class="h4 mb-10 text-white text-center">Account</h1>
+            {% from "macros/breadcrumbs.html" import breadcrumbs %}
+            {{ breadcrumbs('text-center', [['index', 'Home', 'Account']]) }}
+        </div>
+    </div>
+</header>
+
+<div class="dx-box-5 bg-grey-6">
+    <div class="container">
+        <div class="row align-items-center justify-content-between vertical-gap mnt-30 sm-gap mb-50">
+            <div class="col-auto">
+                <h2 class="h4 mb-0 mt-0">Your Tickets</h2>
+            </div>
+            <div class="col pl-30 pr-30 d-none d-sm-block">
+                <div class="dx-separator ml-10 mr-10"></div>
+            </div>
+            <div class="col-auto">
+                <a href="ticket-submit.html" class="dx-btn dx-btn-md">Submit a ticket</a>
+            </div>
+        </div>
+
+        {% from "macros/ticket.html" import ticket %}
+        {{ ticket("avatar-1.png", "single-ticket.html", "Open", "dx-ticket-new dx-ticket-open", "John Leonard", "Need help with customization. Some options are not appearing...", ["Update: 5 Nov 2018", "Product: Quantial", "Comments: 2"]) }}
+        {{ ticket("avatar-default.svg", "single-ticket.html", "Closed", "dx-ticket-closed", "Bruno Rice", "Theme not updating in downloads", ["Update: 4 Nov 2018", "Product: Sensific", "Comments: 11"]) }}
+    </div>
+</div>
+<div class="dx-separator"></div>
+
+<div class="dx-box-5 pb-100">
+    <div class="container mt-4 mnb-7">
+        <div class="row align-items-center justify-content-between vertical-gap mnt-30 sm-gap mb-50">
+            <h2 class="col-auto h4 mb-0 mt-0">Purchased Items</h2>
+            <div class="col pl-30 pr-30 d-none d-sm-block">
+                <div class="dx-separator ml-10 mr-10"></div>
+            </div>
+            <div class="col-auto">
+                <a href="account-licenses.html" class="dx-btn dx-btn-md">View Licenses</a>
+            </div>
+        </div>
+        <div class="row vertical-gap">
+            {% from "macros/portfolio.html" import portfolio2 %}
+            <div class="col-12 col-md-6 col-lg-4">
+                {{ portfolio2('product-1-sm', 'Quantial – Moving Upon Signs Moveth Lesser', 'product.html') }}
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                {{ portfolio2('product-2-sm', 'Sensific – Saying Beast Lesser for in Fruitful', 'product.html') }}
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                {{ portfolio2('product-3-sm', 'Minist – Subdue Above for Signs Dry is Have Great', 'product.html') }}
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                {{ portfolio2('product-4-sm', 'Desty – She\'d Under Light Over Multiply Stars Winged', 'product.html') }}
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                {{ portfolio2('product-5-sm', 'Silies – Grass Living Fly Subdue After Fruitful', 'product.html') }}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

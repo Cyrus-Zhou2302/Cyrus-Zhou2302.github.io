@@ -1,0 +1,28 @@
+{% macro ticket(img="", link="", status="", class="", name="", title="", info="") %}
+<a href="{{ link }}" class="dx-ticket-item {{ class }} dx-block-decorated">
+    <span class="dx-ticket-img">
+        {% if img %}
+        <img src="assets/images/{{ img }}" alt="">
+        {% endif %}
+    </span>
+    <span class="dx-ticket-cont">
+        <span class="dx-ticket-name">
+            {{ name }}
+        </span>
+        <span class="dx-ticket-title h5">
+            {{ title }}
+        </span>
+        <ul class="dx-ticket-info">
+            {% for info in info %}
+            <li>{{ info }}</li>
+            {% endfor %}
+            {% if class === 'dx-ticket-new' or class === 'dx-ticket-new dx-ticket-open' %}
+            <li class="dx-ticket-new">New</li>
+            {% endif %}
+        </ul>
+    </span>
+    <span class="dx-ticket-status">
+        {{ status }}
+    </span>
+</a>
+{% endmacro %}

@@ -1,0 +1,88 @@
+{% set header_title = 'Store' %}
+{% extends 'layouts/layout-1.html' %}
+{% set navbar_sticky = true %}
+{% set navbar_expand_lg = true %}
+
+{% block content %}
+
+<header class="dx-header dx-box-1">
+    <div class="container">
+        <div class="bg-image bg-image-parallax">
+            <img src="assets/images/bg-header-2.png" class="jarallax-img" alt="">
+            <div style="background-color: rgba(27, 27, 27, .8);"></div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-xl-7">
+                <h1 class="h2 mb-30 text-white text-center">Digital Products</h1>
+                <form action="#" class="dx-form dx-form-group-inputs">
+                    <input type="text" name="" value="" class="form-control" placeholder="Keyword search...">
+                    <button class="dx-btn dx-btn-lg">Search</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="dx-isotope-container">
+    <div class="dx-box bg-white">
+        <div class="container">
+            <ul class="dx-links dx-isotope-filter text-center">
+                <li class="active" data-filter="*">All Items</li>
+                <li data-filter=".theme">Themes</li>
+                <li data-filter=".template">Templates</li>
+                <li data-filter=".plugin">Plugins</li>
+            </ul>
+        </div>
+    </div>
+    <div class="dx-separator"></div>
+
+    <div class="dx-box-5 pb-100 bg-grey-6">
+        <div class="container">
+            <div class="row vertical-gap dx-isotope-grid">
+                {% from "macros/portfolio.html" import portfolio %}
+                <div class="col-12 col-md-6 col-lg-4 dx-isotope-grid-item theme">
+                    {{ portfolio('product-1', '#', 'Quantial – Moving Upon Signs Moveth Lesser', '49') }}
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 dx-isotope-grid-item theme">
+                    {{ portfolio('product-2', '#', 'Sensific – Saying Beast Lesser for in Fruitful', '59') }}
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 dx-isotope-grid-item template">
+                    {{ portfolio('product-3', '#', 'Minist – Subdue Above for Signs Dry is Have Great', '39') }}
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 dx-isotope-grid-item theme">
+                    {{ portfolio('product-4', '#', 'Desty – She\'d Under Light Over Multiply Stars Winged', '99') }}
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 dx-isotope-grid-item plugin">
+                    {{ portfolio('product-5', '#', 'Silies – Grass Living Fly Subdue After Fruitful', '99') }}
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 dx-isotope-grid-item theme">
+                    {{ portfolio('product-6', '#', 'Interra – Evening Were Set Beginning Image That One', '59') }}
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 dx-isotope-grid-item template">
+                    {{ portfolio('product-7', '#', 'Explora – Open Winged Lights Spirit Very Subdue', '30') }}
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 dx-isotope-grid-item template">
+                    {{ portfolio('product-8', '#', 'Thoute – Yielding Land Fill Gathering Midst Second', '23') }}
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 dx-isotope-grid-item theme">
+                    {{ portfolio('product-9', '#', 'Accountry – Saying Gathering Image Above Dominion', '23') }}
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 dx-isotope-grid-item plugin">
+                    {{ portfolio('product-10', '#', 'Mained – Third Lights Greater Were Morning', 'Free') }}
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 dx-isotope-grid-item theme">
+                    {{ portfolio('product-11', '#', 'Treate – Blessed Which Give May Make Life Sea Days', 'Free') }}
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 dx-isotope-grid-item plugin">
+                    {{ portfolio('product-12', '#', 'Priety – Living Given Night a in Itself Lesser Fowl', 'Free') }}
+                </div>
+            </div>
+            <div class="text-center mt-70">
+                <a href="#" class="dx-btn dx-btn-grey dx-btn-lg dx-btn-load" data-btn-loaded="all products shown">Load More</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

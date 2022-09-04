@@ -1,0 +1,120 @@
+{
+    "custom_styles": false,
+    "custom_css": false,
+    "breadcrumbs": false,
+    "nav": true,
+    "nav_logo": "Amdesk.",
+    "nav_logo_img": true,
+    "nav_logo_path": "assets/images/logo.svg",
+    "nav_logo_width": "88px",
+    "nav_logo_url": "index.html",
+    "nav_autohide": "true",
+    "nav_align": "left",
+    "nav_dropdown_triangle": true,
+    "nav_dropdown_dark": false,
+    "navigation": {
+        "store.html": {
+            "name": "Store",
+            "sub": {
+                "store.html": {
+                    "name": "Store"
+                },
+                "product.html": {
+                    "name": "Product"
+                },
+                "checkout.html": {
+                    "name": "Checkout"
+                }
+            }
+        },
+        "blog.html": {
+            "name": "Blog",
+            "sub": {
+                "blog.html": {
+                    "name": "Blog"
+                },
+                "single-post.html": {
+                    "name": "Single Post"
+                }
+            }
+        },
+        "help-center.html": {
+            "name": "Help Center",
+            "sub": {
+                "help-center.html": {
+                    "name": "Help Center"
+                },
+                "documentations.html": {
+                    "name": "Documentations",
+                    "sub": {
+                        "documentations.html": {
+                            "name": "Documentations"
+                        },
+                        "single-documentation.html": {
+                            "name": "Single documentation"
+                        }
+                    }
+                },
+                "articles.html": {
+                    "name": "Knowledge Base",
+                    "sub": {
+                        "articles.html": {
+                            "name": "Knowledge Base"
+                        },
+                        "single-article-category.html": {
+                            "name": "Single Article Category"
+                        },
+                        "single-article.html": {
+                            "name": "Single Article"
+                        }
+                    }
+                },
+                "forums.html": {
+                    "name": "Forums",
+                    "sub": {
+                        "forums.html": {
+                            "name": "Forums"
+                        },
+                        "topics.html": {
+                            "name": "Topics"
+                        },
+                        "single-topic.html": {
+                            "name": "Single Topic"
+                        }
+                    }
+                },
+                "ticket.html": {
+                    "name": "Ticket System",
+                    "sub": {
+                        "ticket.html": {
+                            "name": "Ticket System"
+                        },
+                        "ticket-submit.html": {
+                            "name": "Submit Ticket"
+                        },
+                        "ticket-submit-2.html": {
+                            "name": "Submit Ticket 2"
+                        },
+                        "single-ticket.html": {
+                            "name": "Single Ticket"
+                        }
+                    }
+                }
+            }
+        },
+        "account.html": {
+            "name": "Account",
+            "sub": {
+                "account.html": {
+                    "name": "Account"
+                },
+                "account-licenses.html": {
+                    "name": "Licenses"
+                },
+                "account-settings.html": {
+                    "name": "Settings"
+                }
+            }
+        }
+    }
+}

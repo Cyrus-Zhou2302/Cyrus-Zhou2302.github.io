@@ -1,0 +1,53 @@
+{% set header_title = 'Blog' %}
+{% extends 'layouts/layout-1.html' %}
+{% set navbar_sticky = true %}
+{% set navbar_expand_lg = true %}
+
+{% block content %}
+
+<header class="dx-header dx-box-5">
+    <div class="bg-image bg-image-parallax">
+        <img src="assets/images/bg-header-3.png" class="jarallax-img" alt="">
+        <div style="background-color: rgba(27, 27, 27, .8);"></div>
+    </div>
+
+    <div class="container mnb-8">
+        <div class="row justify-content-center">
+            <div class="col-xl-7">
+                <h1 class="h4 mb-10 text-white text-center">Welcome to our Blog</h1>
+                {% from "macros/breadcrumbs.html" import breadcrumbs %}
+                {{ breadcrumbs('text-center', [['index', 'Home', 'Blog']]) }}
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="dx-box-1 pb-100 bg-grey-6">
+    <div class="container">
+        <div class="row vertical-gap md-gap">
+            <div class="col-lg-8">
+                {% from "macros/blog.html" import blog %}
+                {{ blog('blog-3.png', 'The Big Thing in Design', '25 Sep 2018', '124', 'News', 'John', "Hath without winged from creature won't the seas midst without every gathering place is beast and, unto, and darkness of rule don't third male moving winged is two have deep abundantly wherein. There god fruitful Make appear. Night made Isn't.") }}
+                {{ blog('blog-1.png', 'Will Coding Ever Rule the World?', '24 Sep 2018', '267', 'Theme Reviews', 'John', "I doesn't sea which let man. Have whose open every under from fifth land. Evening a. It spirit. Image moving. Grass. Fifth land seed yielding. May gathering dry saw abundantly image creepeth hath were for seed. Them moving fifth. Creeping face created fruitful is saying fly beginning his to and stars. Seed spirit fowl made face years bearing.") }}
+                {{ blog('blog-2.png', 'Master Your Vision in 3 Simple Steps', '20 Sep 2018', '389', 'Theme Reviews', 'John', "Creeping fifth was, heaven beginning called cattle beast creeping may open. Green fly creature let without, won't spirit us a creeping that night seed winged man which be Yielding, be. All all to bring land god him open creepeth thing you're, likeness evening two creeping had fowl let rule appear was. Winged creeping. Void form. They're created firmament had fly.") }}
+                {{ blog('blog-4.png', 'The Beginning of The Journey', '19 Sep 2018', '452', 'Theme Reviews', 'John', "Heaven you moved heaven Firmament in in day. Dominion. Likeness over lights third, great lights you their his after, said.") }}
+                <div class="dx-blog-item pt-0">
+                    <a href="#" class="dx-btn dx-btn-lg dx-btn-grey dx-btn-block dx-btn-load" data-btn-loaded="Shown all posts">Load More Post</a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="dx-sticky dx-sidebar" data-sticky-offsetTop="120" data-sticky-offsetBot="40">
+                    {% from "macros/widgets.html" import subscribe, search, categories, latestPosts, tags, twitter %}
+                    {{ subscribe('') }}
+                    {{ search('') }}
+                    {{ categories('') }}
+                    {{ latestPosts('') }}
+                    {{ tags('') }}
+                    {{ twitter('') }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

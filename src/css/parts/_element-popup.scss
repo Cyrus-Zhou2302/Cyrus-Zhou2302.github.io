@@ -1,0 +1,79 @@
+.fancybox-slide {
+    padding: 0;
+
+    @media screen and (min-width: 768px) {
+        &::-webkit-scrollbar-track {
+            background-color: $color_dark_1;
+        }
+        &::-webkit-scrollbar {
+            width: 8px;
+            background-color: $color_dark_1;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: #fff;
+            border-radius: 4px;
+        }
+    }
+}
+
+.dx-popup {
+    display: none;
+    padding: 0;
+
+    &.dx-popup-signin {
+        position: static;
+        background: none;
+
+        &::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            pointer-events: none;
+            background-color: $color_dark_1;
+            z-index: -1;
+        }
+    }
+
+    &.dx-popup-modal {
+        width: auto;
+        height: auto;
+        margin: 20px 0;
+
+        .fancybox-close-small {
+            top: 13px;
+            right: 13px;
+            width: 46px;
+            height: 46px;
+            color: $color_grey_3;
+
+            &:hover,
+            &.hover {
+                color: $color_grey_1;
+            }
+        }
+    }
+    &.dx-popup-subscribe {
+        width: 365px;
+        border-radius: 3px;
+    }
+
+    .fancybox-close-small {
+        top: 10px;
+        right: 10px;
+        width: 60px;
+        height: 60px;
+        color: $color_grey_3;
+        transition: color .2s ease-in-out;
+
+        &:hover,
+        &.hover {
+            color: #fff;
+        }
+        &.fancybox-focus {
+            outline: 0;
+        }
+    }
+}

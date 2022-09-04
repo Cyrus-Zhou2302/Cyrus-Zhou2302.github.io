@@ -1,0 +1,233 @@
+// stylelint-disable declaration-no-important
+
+/*
+ * Text Color Helper
+ */
+@each $name, $color in $colors {
+    .text-#{$name} {
+        color: $color !important;
+    }
+}
+
+
+/*
+ * Bg Color Helper
+ */
+@each $name, $color in $colors {
+    .bg-#{$name} {
+        background-color: $color !important;
+    }
+}
+
+
+/*
+ * Image Fit
+ */
+.dx-img {
+    max-width: 100%;
+    height: auto;
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/*
+ * Text Align Helper
+ */
+.text-left {
+    text-align: left;
+}
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+.text-justify {
+    text-align: justify;
+}
+
+/*
+ * Inline Block Helper
+ */
+.dib {
+    display: inline-block !important;
+}
+
+/*
+ * Block Helper
+ */
+.db {
+    display: block !important;
+    width: 100%;
+}
+
+/*
+ * Text Transform Helper
+ */
+.text-uppercase {
+    text-transform: uppercase !important;
+}
+
+/*
+ * White-space Helper
+ */
+.wsw {
+    white-space: normal;
+}
+.wsnw {
+    white-space: nowrap;
+}
+
+/*
+ * Font Weight Helper
+ */
+$helper-fw: 100, 200, 300, 400, 500, 600, 700, 800, 900 !default;
+@each $item in $helper-fw {
+    .fw-#{$item} {
+        font-weight: #{$item} !important;
+    }
+}
+
+
+/*
+ * Font Size Helper
+ */
+$helper-fs: 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30, 35, 40, 45, 50 !default;
+@each $item in $helper-fs {
+    .fs-#{$item} {
+        font-size: #{$item}px !important;
+    }
+}
+
+
+/*
+ * Line Height Helper
+ */
+$helper-lh: 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50 !default;
+@each $item in $helper-lh {
+    .lh-#{$item} {
+        line-height: #{$item}px !important;
+    }
+}
+
+
+/*
+ * Border Radius Helper
+ */
+$helper-br: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 18, 20, 25, 30, 35 !default;
+@each $item in $helper-br {
+    .br-#{$item} {
+        border-radius: #{$item}px !important;
+    }
+}
+
+
+/*
+ * Paddings Helper
+ */
+$helper-p: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 85, 90, 100 !default;
+@each $item in $helper-p {
+    .p-#{$item} {
+        padding: #{$item}px !important;
+    }
+}
+@each $item in $helper-p {
+    .pt-#{$item} {
+        padding-top: #{$item}px !important;
+    }
+}
+@each $item in $helper-p {
+    .pl-#{$item} {
+        padding-left: #{$item}px !important;
+    }
+}
+@each $item in $helper-p {
+    .pr-#{$item} {
+        padding-right: #{$item}px !important;
+    }
+}
+@each $item in $helper-p {
+    .pb-#{$item} {
+        padding-bottom: #{$item}px !important;
+    }
+}
+
+
+/*
+ * Margins Helper
+ */
+.mauto {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+$helper-m: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 13, 15, 18, 20, 25, 30, 35, 40, 45, 50, 55, 60, 70, 80, 90, 100 !default;
+@each $item in $helper-m {
+    .m-#{$item} {
+        margin: #{$item}px !important;
+    }
+}
+@each $item in $helper-m {
+    .mt-#{$item} {
+        margin-top: #{$item}px !important;
+    }
+}
+@each $item in $helper-m {
+    .ml-#{$item} {
+        margin-left: #{$item}px !important;
+    }
+}
+@each $item in $helper-m {
+    .mr-#{$item} {
+        margin-right: #{$item}px !important;
+    }
+}
+@each $item in $helper-m {
+    .mb-#{$item} {
+        margin-bottom: #{$item}px !important;
+    }
+}
+
+
+/*
+ * Negative Margins Helper
+ */
+@each $item in $helper-m {
+    .mn-#{$item} {
+        margin: #{$item * -1}px !important;
+    }
+}
+@each $item in $helper-m {
+    .mnt-#{$item} {
+        margin-top: #{$item * -1}px !important;
+    }
+}
+@each $item in $helper-m {
+    .mnl-#{$item} {
+        margin-left: #{$item * -1}px !important;
+    }
+}
+@each $item in $helper-m {
+    .mnr-#{$item} {
+        margin-right: #{$item * -1}px !important;
+    }
+}
+@each $item in $helper-m {
+    .mnb-#{$item} {
+        margin-bottom: #{$item * -1}px !important;
+    }
+}
+
+
+/*
+ * Opacity
+ */
+$helper-op: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 !default;
+@each $item in $helper-op {
+    .op-#{$item} {
+        opacity: #{$item / 10} !important;
+    }
+}

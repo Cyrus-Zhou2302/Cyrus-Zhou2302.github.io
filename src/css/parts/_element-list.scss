@@ -1,0 +1,107 @@
+// List
+.dx-list {
+    padding-left: 18px;
+    margin: 0;
+
+    &.dx-list-decimal {
+        padding-left: 37px;
+
+        > li {
+            padding-left: 0;
+            list-style-type: decimal;
+        }
+    }
+
+    > li {
+        padding-left: 8px;
+        margin: 0;
+        color: $color_grey_1;
+
+        + li {
+            margin-top: 11px;
+        }
+
+        strong {
+            color: $color_dark_1;
+        }
+
+        a {
+            display: block;
+            color: $color_main_1;
+            text-decoration: none;
+
+            &:hover,
+            &:focus {
+                color: $color_dark_1;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+// Style Documentation
+.dx-list-documentation {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 25px;
+    margin: 0 -5px;
+    box-shadow: none;
+
+    .dx-list-documentation {
+        a::after {
+            display: none;
+        }
+    }
+
+    > li {
+        position: relative;
+        padding: 0 15px;
+        list-style: none;
+
+        + li {
+            margin-top: 16px;
+        }
+
+        a,
+        button {
+            position: relative;
+            display: block;
+            padding: 3px 0;
+            font-size: 1rem;
+            font-weight: 600;
+            color: $color_dark_1;
+            text-decoration: none;
+            transition: color .2s ease-in-out;
+
+            + .dx-accordion-btn {
+                position: absolute;
+                top: -1px;
+                right: 15px;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: auto;
+                bottom: 0;
+                left: -35px;
+                width: 2px;
+                height: auto;
+                background-color: $color_main_1;
+                opacity: 0;
+                will-change: opacity;
+                transition: opacity .2s ease-in-out;
+            }
+
+            &.active,
+            &:hover {
+                color: $color_main_1;
+                text-decoration: none;
+            }
+            &.active::after {
+                opacity: 1;
+            }
+        }
+    }
+}

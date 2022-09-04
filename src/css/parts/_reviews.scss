@@ -1,0 +1,36 @@
+.dx-review {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 50px;
+    overflow: hidden;
+
+    @media screen and #{$media_sm} {
+        padding: 30px;
+    }
+
+    .dx-review-title {
+        margin-bottom: 5px;
+        font-family: $font_title;
+        font-size: .875rem;
+        font-weight: 700;
+        color: $color_dark_2;
+        text-transform: uppercase;
+        letter-spacing: normal;
+    }
+    .dx-review-subtitle {
+        color: $color_grey_3;
+    }
+    .dx-review-text {
+        margin-top: 17px;
+
+        @media screen and #{$media_sm} {
+            font-size: 1rem;
+        }
+    }
+    .dx-review-rating {
+        margin-top: 20px;
+        color: $color_main_1;
+    }
+}

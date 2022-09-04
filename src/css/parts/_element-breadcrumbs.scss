@@ -1,0 +1,43 @@
+.dx-breadcrumbs {
+    display: block;
+    padding: 0;
+    margin: 0;
+    font-size: .9375rem;
+
+    > li {
+        display: inline-block;
+        color: $color_text_2;
+
+        &::after {
+            content: " / ";
+            margin-right: 3px;
+            margin-left: 3px;
+        }
+        &:last-child::after {
+            content: "";
+        }
+
+        > a {
+            color: $color_text_2;
+            transition: color .2s ease-in-out;
+
+            &:hover {
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+    }
+}
+.dx-breadcrumbs-dark {
+    > li {
+        color: $color_dark_1;
+
+        > a {
+            color: $color_dark_1;
+
+            &:hover {
+                color: $color_main_1;
+            }
+        }
+    }
+}

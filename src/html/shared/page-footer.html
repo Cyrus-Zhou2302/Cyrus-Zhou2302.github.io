@@ -1,0 +1,23 @@
+<!-- START: Footer -->
+<footer class="dx-footer">
+    <div class="dx-box-1">
+        <div class="container">
+            <div class="row vertical-gap lg-gap">
+                {% from "macros/widgets.html" import copyright, list, latestProducts, latestPosts %}
+                <div class="col-sm-6 col-lg-3">
+                    {{ copyright('footer') }}
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    {{ list('footer') }}
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    {{ latestProducts('footer') }}
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    {{ latestPosts('footer') }}
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- END: Footer -->

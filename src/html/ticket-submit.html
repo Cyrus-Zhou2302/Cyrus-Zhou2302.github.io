@@ -1,0 +1,76 @@
+{% set header_title = 'Submit Ticket' %}
+{% extends 'layouts/layout-1.html' %}
+{% set navbar_sticky = true %}
+{% set navbar_expand_lg = true %}
+
+{% block content %}
+
+<header class="dx-header dx-box-1">
+    <div class="container">
+        <div class="bg-image bg-image-parallax">
+            <img src="assets/images/bg-header-4.png" class="jarallax-img" alt="">
+            <div style="background-color: rgba(27, 27, 27, .8);"></div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-xl-7">
+                <h1 class="h2 mb-30 text-white text-center">How can we help you?</h1>
+                <form action="#" class="dx-form dx-form-group-inputs">
+                    <input type="text" name="" value="" class="form-control" placeholder="Keyword search...">
+                    <button class="dx-btn dx-btn-lg">Search</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="dx-box bg-white">
+    <div class="container">
+        <ul class="dx-links text-center">
+            <li><a href="help-center.html">Support Home</a></li>
+            <li><a href="documentations.html">Documentations</a></li>
+            <li><a href="articles.html">Knowledge Base</a></li>
+            <li><a href="forums.html">Forums</a></li>
+            <li><a href="ticket.html">Ticket System</a></li>
+        </ul>
+    </div>
+</div>
+<div class="dx-separator"></div>
+
+<div class="dx-box-5 pb-100 bg-grey-6">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-7">
+                <div class="dx-box dx-box-decorated">
+                    <div class="dx-box-content">
+                        <h2 class="h6 mb-6">Submit a Ticket</h2>
+                        {% from "macros/breadcrumbs.html" import breadcrumbs %}
+                        {{ breadcrumbs('text-left dx-breadcrumbs-dark mnb-6 fs-14', [['help-center', 'Support Home'], ['ticket', 'Ticket System', 'Submit Ticket']]) }}
+                    </div>
+                    <div class="dx-separator"></div>
+                    <div class="dx-box-content">
+                        <form action="#" class="dx-form">
+                            <div class="dx-form-group">
+                                <label for="select-product" class="mnt-7">Select Product</label>
+                                <select class="form-control dx-select-ticket" name="" id="select-product">
+                                    <option value="1" data-content='<img src="assets/images/product-1-xs.png" alt=""> Quantial'></option>
+                                    <option value="2" data-content='<img src="assets/images/product-2-xs.png" alt=""> Sensific'></option>
+                                    <option value="3" data-content='<img src="assets/images/product-3-xs.png" alt=""> Minist'></option>
+                                    <option value="4" data-content='<img src="assets/images/product-4-xs.png" alt=""> Desty'></option>
+                                    <option value="5" data-content='<img src="assets/images/product-5-xs.png" alt=""> Silies'></option>
+                                </select>
+                            </div>
+                            <div class="dx-form-group">
+                                <a href="ticket-submit-2.html" class="dx-btn dx-btn-block dx-btn-xl dx-btn-envato d-flex align-items-center justify-content-center">
+                                    <span class="fas fa-leaf mr-20"></span><span>Log in with Envato</span>
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

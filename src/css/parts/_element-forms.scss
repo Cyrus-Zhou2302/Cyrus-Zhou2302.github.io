@@ -1,0 +1,243 @@
+/* Placeholders */
+::placeholder,
+.form-control::placeholder {
+    color: inherit;
+    opacity: .8;
+    will-change: opacity;
+    transition: opacity .2s ease-in-out;
+}
+
+/* Remove outline from focused buttons */
+button:focus {
+    outline: 0;
+}
+
+/* From Style 1 */
+.dx-form {
+    margin: 0;
+
+    .dx-form-group + .dx-form-group {
+        margin-top: 30px;
+    }
+    .dx-form-group-md + .dx-form-group-md {
+        margin-top: 20px;
+    }
+
+    .form-control {
+        height: 54px;
+        padding: 12px 26px;
+        font-family: $font_headings;
+        color: $color_text_3;
+        text-align: left;
+        text-transform: none;
+        background-color: #fff;
+        border: 0;
+        border-radius: 3px;
+        opacity: 1;
+
+        &:hover,
+        &.hover {
+            &::placeholder {
+                opacity: 1;
+            }
+        }
+        &:focus,
+        &.focus {
+            outline: none;
+            box-shadow: none;
+
+            &::placeholder {
+                opacity: 1;
+            }
+        }
+    }
+    .form-control-style-2 {
+        padding: 12px 19px;
+        color: rgba($color_grey_1, .8);
+        background-color: lighten($color_grey_3, 25%);
+        box-shadow: inset 0 0 0 1px lighten($color_grey_3, 18%);
+        transition: background-color .2s ease-in-out, box-shadow .2s ease-in-out, color .2s ease-in-out;
+
+        &:hover,
+        &.hover,
+        &:focus,
+        &.focus {
+            color: darken($color_grey_1, 10%);
+            background-color: lighten($color_grey_3, 22%);
+            box-shadow: inset 0 0 0 1px lighten($color_grey_3, 10%);
+        }
+    }
+    .form-control-style-3 {
+        padding: 12px 19px;
+        color: rgba($color_grey_1, .8);
+        background-color: #fff;
+        box-shadow: inset 0 0 0 1px lighten($color_grey_3, 18%);
+        transition: box-shadow .2s ease-in-out, color .2s ease-in-out;
+
+        &:hover,
+        &.hover {
+            color: darken($color_grey_1, 10%);
+            background-color: #fff;
+            box-shadow: inset 0 0 0 1px lighten($color_grey_3, 10%);
+        }
+        &:focus,
+        &.focus {
+            color: darken($color_grey_1, 10%);
+            box-shadow: inset 0 0 0 1px darken($color_grey_3, 15%);
+        }
+    }
+    .form-control-style-4 {
+        height: 56px;
+        font-family: $font_title;
+        font-size: .75rem;
+        font-weight: 500;
+        color: $color_grey_3;
+        text-align: center;
+        text-transform: uppercase;
+        background-color: $color_dark_3;
+        transition: color .2s ease-in-out;
+
+        &:hover,
+        &.hover,
+        &:focus,
+        &.focus {
+            color: #fff;
+        }
+    }
+
+    textarea,
+    textarea.form-control {
+        height: 170px;
+        min-height: 54px;
+        max-height: 250px;
+    }
+    label {
+        display: block;
+        font-family: $font_headings;
+        font-weight: 400;
+        color: $color_dark_1;
+    }
+    select.form-control:not([size]):not([multiple]) {
+        height: 54px;
+    }
+    select {
+        &.form-control {
+            color: $color_text_3;
+
+            /* fix for select on iOs devices */
+            background-color: #fff;
+
+            option {
+                color: $color_text_3;
+            }
+        }
+        &.form-control-style-2 {
+            color: rgba($color_grey_1, .8);
+            background-color: rgba(lighten($color_grey_3, 24%), .8);
+
+            option {
+                color: $color_grey_1;
+                background-color: #fff;
+            }
+        }
+        &.form-control-style-3 {
+            color: rgba($color_grey_1, .8);
+
+            option {
+                color: $color_grey_1;
+                background-color: #fff;
+            }
+        }
+    }
+    @-moz-document url-prefix("") {
+        select.form-control option {
+            color: inherit;
+        }
+    }
+    select.form-control[multiple] option {
+        color: inherit;
+    }
+
+    // Custom Select
+    .custom-select {
+        padding-right: 60px;
+        background: #fff url("../images/icon-drop.svg") no-repeat right 1rem center;
+    }
+
+    // Group
+    &.dx-form-group-inputs,
+    .dx-form-group-inputs {
+        display: flex;
+
+        > * {
+            margin-right: -1px;
+            border-radius: 0;
+        }
+        > *:first-child {
+            border-radius: 3px 0 0 3px;
+        }
+        > *:last-child {
+            margin-right: 0;
+            border-radius: 0 3px 3px 0;
+        }
+    }
+
+    // Quantity
+    &.dx-form-quantity,
+    .dx-form-quantity {
+        display: inline-flex;
+
+        .dx-form-quantity-input {
+            display: inline-block;
+            width: 25px;
+            min-width: 25px;
+            height: 26px;
+            padding: 0;
+            font-size: .9375rem;
+            color: $color_dark_1;
+            text-align: center;
+            background-color: #fff;
+
+            &[type="number"] {
+                // stylelint-disable-next-line
+                -moz-appearance:textfield;
+            }
+
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+                // stylelint-disable-next-line
+                -webkit-appearance: none;
+            }
+
+            &:hover,
+            &.hover,
+            &:focus {
+                background-color: #fff;
+            }
+        }
+        .dx-form-quantity-minus,
+        .dx-form-quantity-plus {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 25px;
+            min-width: 25px;
+            height: 26px;
+            color: $color_grey_3;
+            box-shadow: inset 0 0 0 1px rgba(lighten($color_grey_3, 17%), .8);
+            transition: box-shadow .2s ease-in-out, color .2s ease-in-out;
+            z-index: 1;
+
+            &:hover,
+            &.hover,
+            &:focus {
+                color: $color_dark_1;
+                text-decoration: none;
+                box-shadow: inset 0 0 0 1px lighten($color_grey_3, 10%);
+            }
+        }
+        .dx-form-quantity-minus {
+            margin-right: -1px;
+        }
+    }
+}

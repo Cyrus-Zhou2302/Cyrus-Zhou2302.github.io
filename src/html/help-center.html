@@ -1,0 +1,74 @@
+{% set header_title = 'Help Center - How can we help you?' %}
+{% extends 'layouts/layout-1.html' %}
+{% set navbar_sticky = true %}
+{% set navbar_expand_lg = true %}
+
+{% block content %}
+
+<header class="dx-header dx-box-1">
+    <div class="container">
+        <div class="bg-image bg-image-parallax">
+            <img src="assets/images/bg-header-4.png" class="jarallax-img" alt="">
+            <div style="background-color: rgba(27, 27, 27, .8);"></div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-xl-7">
+                <h1 class="h2 mb-30 text-white text-center">How can we help you?</h1>
+                <form action="#" class="dx-form dx-form-group-inputs">
+                    <input type="text" name="" value="" class="form-control" placeholder="Keyword search...">
+                    <button class="dx-btn dx-btn-lg">Search</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="dx-box bg-white">
+    <div class="container">
+        <ul class="dx-links text-center">
+            <li class="active"><a href="help-center.html">Support Home</a></li>
+            <li><a href="documentations.html">Documentations</a></li>
+            <li><a href="articles.html">Knowledge Base</a></li>
+            <li><a href="forums.html">Forums</a></li>
+            <li><a href="ticket.html">Ticket System</a></li>
+        </ul>
+    </div>
+</div>
+<div class="dx-separator"></div>
+
+<div class="dx-box-5 bg-grey-6">
+    <div class="container">
+        <div class="row justify-content-center vertical-gap">
+            {% from "macros/feature.html" import feature3 %}
+            <div class="col-12 col-md-4 col-lg-3 dx-feature-variable">
+                {{ feature3('pe-7s-copy-file', 'Documentations', 'Phasellus interdum est diam, eu varius odio tincidunt eget ultrices et', 'documentations.html', '1') }}
+            </div>
+            <div class="col-12 col-md-4 col-lg-3 dx-feature-variable">
+                {{ feature3('pe-7s-notebook', 'Knowledge Base', 'Aliquam id nisi sit amet massa mollis lobortis interdum felis integer at arcu mattis', 'articles.html', '2') }}
+            </div>
+            <div class="col-12 col-md-4 col-lg-3 dx-feature-variable">
+                {{ feature3('pe-7s-chat', 'Forums', 'Sed eget nibh justo euismod maximus et vel nisl pellentesque suscipit nisi', 'forum.html', '3') }}
+            </div>
+            <div class="col-12 col-md-4 col-lg-3 dx-feature-variable">
+                {{ feature3('pe-7s-ticket', 'Ticket System', 'Vivamus sceleriue libero velit blandit, hendrerit nisl at,dapibus sollicitudin', 'ticket.html', '4') }}
+            </div>
+        </div>
+    </div>
+</div>
+<div class="dx-separator"></div>
+
+<div class="dx-box-5 pb-100">
+    <div class="container mt-4 mnb-7">
+        <div class="row align-items-center vertical-gap mnt-30 sm-gap mb-50">
+            <h2 class="col-auto h4 mb-0 mt-0">Popular Articles</h2>
+            <div class="col pl-30 pr-30 d-none d-sm-block">
+                <div class="dx-separator"></div>
+            </div>
+            <div class="col-auto dx-slider-arrows-clone"></div>
+        </div>
+        {% include "shared/page-slider-articles.html" %}
+    </div>
+</div>
+
+{% endblock %}

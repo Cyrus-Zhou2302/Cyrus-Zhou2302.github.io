@@ -1,0 +1,137 @@
+.dx-dropdown {
+    > a::before,
+    > button::before {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-top: 21px;
+        margin-left: -10px;
+        visibility: hidden;
+        border: 10px solid transparent;
+        border-bottom: 8px solid #fff;
+        z-index: 100;
+    }
+
+    &.show {
+        > a::before,
+        > button::before {
+            visibility: visible;
+            z-index: 102;
+        }
+    }
+
+    .dropdown-menu {
+        display: block;
+        padding: 15px 0;
+        margin: 37px 0 0;
+        font-family: $font_body;
+        visibility: hidden;
+        border: 0;
+        box-shadow: 0 0 40px 0 rgba(#000, .05);
+        z-index: 100;
+
+        &.show {
+            visibility: visible;
+            z-index: 101;
+        }
+
+        li > a:not(.dx-btn) {
+            display: flex;
+            align-items: center;
+            padding: 13px 30px 13px 15px;
+            font-size: .875rem;
+            font-weight: 400;
+            color: $color_grey_1;
+            text-transform: none;
+            white-space: nowrap;
+            transition: color .2s ease-in-out, background-color .2s ease-in-out;
+
+            &:hover,
+            &.hover,
+            &:focus {
+                color: $color_dark_1;
+                background-color: rgba(#000, .025);
+            }
+        }
+    }
+}
+
+// Style Checkout
+.dx-dropdown-checkout {
+    padding: 0;
+    font-family: $font_body;
+    font-weight: 600;
+
+    .dx-table-checkout tr {
+        padding-top: 27px;
+        padding-bottom: 27px;
+
+        + tr {
+            padding-top: 0;
+            border: 0;
+        }
+    }
+
+    .dx-table-checkout-title {
+        min-width: 190px;
+
+        a {
+            font-size: .875rem;
+        }
+    }
+
+    .dx-table-checkout-price {
+        font-size: .875rem;
+    }
+
+    .dx-table-checkout-delete a {
+        font-size: 1.6rem;
+        color: $color_grey_3;
+    }
+
+
+    // Navbar Dropdown
+    &.dx-navbar-dropdown {
+        display: block;
+        padding: 0;
+    }
+
+    // Bootstrap Dropdown
+    &.dx-dropdown {
+        > a::before,
+        > button::before {
+            margin-top: 27px;
+        }
+
+        .dropdown-menu {
+            padding: 0;
+            margin: 44px 0 0;
+        }
+    }
+}
+
+
+// Style Signin
+.dx-dropdown-signin {
+    // Bootstrap Dropdown
+    &.dx-dropdown {
+        > a::before,
+        > button::before {
+            margin-top: 10px;
+            margin-left: -62px;
+        }
+
+        .dropdown-menu {
+            padding: 10px 0;
+            margin-top: 27px;
+
+            a:not(.dx-btn) {
+                padding: 10px 15px;
+            }
+            &.dx-navbar-dropdown-dark > li + li {
+                border-color: #2d2d2d;
+            }
+        }
+    }
+}

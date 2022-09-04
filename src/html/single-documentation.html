@@ -1,0 +1,147 @@
+{% set header_title = 'Single Documentation' %}
+{% extends 'layouts/layout-1.html' %}
+{% set navbar_sticky = true %}
+{% set navbar_expand_lg = true %}
+
+{% block content %}
+
+    <header class="dx-header dx-box-5">
+        <div class="container">
+            <div class="bg-image bg-image-parallax">
+                <img src="assets/images/bg-header-4.png" class="jarallax-img" alt="">
+                <div style="background-color: rgba(27, 27, 27, .8);"></div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-xl-7">
+                    <h1 class="h4 mb-10 text-white text-center">Sensific – Saying Beast Lesser for in Fruitful</h1>
+                    {% from "macros/breadcrumbs.html" import breadcrumbs %}
+                    {{ breadcrumbs('text-center', [['help-center', 'Support Home'], ['documentations', 'Documentations', 'Sensific – Saying Beast Lesser for in Fruitful']]) }}
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="dx-box bg-white">
+        <div class="container">
+            <ul class="dx-links text-center">
+                <li><a href="help-center.html">Support Home</a></li>
+                <li><a href="documentations.html">Documentations</a></li>
+                <li><a href="articles.html">Knowledge Base</a></li>
+                <li><a href="forums.html">Forums</a></li>
+                <li><a href="ticket.html">Ticket System</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="dx-separator"></div>
+    <div class="dx-box-5 pb-100 bg-grey-6">
+        <div class="container">
+            <div class="row vertical-gap md-gap">
+                <div class="col-lg-4">
+                    <div class="dx-sticky dx-sidebar" data-sticky-offsetTop="120" data-sticky-offsetBot="40">
+                        <div class="dx-box dx-box-decorated">
+                            <ul class="dx-list dx-list-documentation accordion dx-accordion" id="accordionList">
+                                <li>
+                                    <a class="active" href="single-documentation.html">Getting Started</a>
+                                </li>
+                                <li>
+                                    <a href="single-documentation.html">Files Structure</a>
+                                </li>
+                                <li>
+                                    <a href="single-documentation.html">Template Structure</a>
+                                    <button class="collapsed dx-accordion-btn" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <span class="icon pe-7s-angle-right"></span>
+                                    </button>
+                                    <div id="collapseOne" class="collapse dx-collapse" data-parent="#accordionList">
+                                        <ul class="dx-list dx-list-documentation">
+                                            <li>
+                                                <a href="single-documentation.html">Main Navigation</a>
+                                            </li>
+                                            <li>
+                                                <a href="single-documentation.html">Mobile Navigation</a>
+                                            </li>
+                                            <li>
+                                                <a href="single-documentation.html">Header</a>
+                                            </li>
+                                            <li>
+                                                <a href="single-documentation.html">Footer</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="single-documentation.html">Widgets</a>
+                                    <button class="collapsed dx-accordion-btn" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                        <span class="icon pe-7s-angle-right"></span>
+                                    </button>
+                                    <div id="collapseTwo" class="collapse dx-collapse" data-parent="#accordionList">
+                                        <ul class="dx-list dx-list-documentation">
+                                            <li>
+                                                <a href="single-documentation.html">Plugins</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="single-documentation.html">Thank You!</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="dx-box dx-box-decorated">
+                        <div class="dx-blog-post">
+                            <div class="dx-blog-post-box pt-40 pb-40">
+                                <h2 class="h4 mb-0">Getting Started</h2>
+                            </div>
+                            <div class="dx-separator"></div>
+                            <div class="dx-blog-post-box">
+                                <p>Kind said evening make. Divide good third saying. Subdue darkness created fill moveth bring green yielding rule, whose called Morning beginning was. It our years sea place fly saw yielding.</p>
+                                <p>Divided man that gathered greater she'd fly two very. Third sea that Had sixth won't they're lesser i give wherein there, green shall behold moving moveth rule itself saying so.</p>
+                                <p class="mb-50"><code>assets/css/example.css</code> – Tree you'll life abundantly dry thing divide air were beginning.</p>
+                                <h3 class="h5">Commented Code</h3>
+                                <p>Herb day fifth moved likeness living image. Fourth void male from saw fly Fill so had thing us good you – <code>assets/js/example.js</code></p>
+
+                                <code class="dx-gist" data-gist-id="a00300c1a3a9c2b66fc09e3c4083c62f" data-gist-file="contact-form.html"></code>
+                            </div>
+                            <div class="dx-separator"></div>
+                            <div class="dx-blog-post-box pt-30 pb-30">
+                                <ul class="dx-blog-post-info mnt-15 mnb-2">
+                                    <li>Date: 11 Feb 2018</li>
+                                    <li>Views: 163</li>
+                                </ul>
+                                <ul class="dx-social-links dx-social-links-style-2 mt-20">
+                                    <li>
+                                        <a href="#" class="dx-social-twitter"><span class="icon fab fa-twitter"></span> Twitter</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="dx-social-facebook"><span class="icon fab fa-facebook"></span> Facebook</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="dx-social-google"><span class="icon fab fa-google"></span> Google</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="dx-social-pinterest"><span class="icon fab fa-pinterest"></span> Pinterest</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dx-box dx-box-content dx-box-decorated mt-40">
+                        <div class="row vertical-gap align-items-center justify-content-center">
+                            <div class="col-auto">
+                                <h3 class="h5 mnt-6 mnb-6">Was this helpful to you?</h3>
+                            </div>
+                            <div class="col-auto d-flex">
+                                <a href="#" class="dx-btn dx-btn-md dx-btn-main-1">Yes</a>
+                                <a href="#" class="dx-btn dx-btn-md dx-btn-grey-2 ml-20">No</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

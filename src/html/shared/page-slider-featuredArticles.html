@@ -1,0 +1,34 @@
+<!-- START: Slider Ffeatured Articles
+
+    {% include "shared/comment-additional-slider.html" %}
+-->
+<div class="swiper-container dx-slider dx-slider-arrows dx-slider-articles"
+    data-swiper-speed="400"
+    data-swiper-space="50"
+    data-swiper-slides="3"
+    data-swiper-breakpoints="true"
+    data-swiper-arrows="true"
+    data-swiper-arrows-clone="true"
+    data-swiper-loop="true"
+    data-swiper-autoHeight="true"
+    data-swiper-grabCursor="true">
+
+    <div class="swiper-wrapper">
+        {% from "macros/article.html" import articleBlock %}
+        <div class="swiper-slide">
+            {{ articleBlock('single-article.html', 'Make menu dropdown working without JavaScript', "Meat all together sea deep isn't replenish called. One moved cattle bring. Can't of. Itself After shall hath winged. Given stars second whose yielding fourth. Subdue years form saw. Second...") }}
+        </div>
+        <div class="swiper-slide">
+            {{ articleBlock('single-article.html', 'Google Analytics', "Likeness seed he may. Brought firmament won't that to. Fowl thing saw behold earth land evening gathering hath after all whales winged. Greater so all two dry. Appear seas fruit...") }}
+        </div>
+        <div class="swiper-slide">
+            {{ articleBlock('single-article.html', 'How to manually import Demo data (if you faced with problems in one-click demo import)', "And have make, isn't land herb good lesser won't. Own. Us. Moveth, divided female their won't subdue seas tree creepeth They're morning isn't let so lights. Sixth, first every night...") }}
+        </div>
+        <div class="swiper-slide">
+            {{ articleBlock('single-article.html', 'WordPress Themes FAQ', "Us sixth she'd, which creeping fruitful winged. To called made seas of grass creature good upon. Air multiply gathering female saying our set creepeth wherein hath waters from midst man...") }}
+        </div>
+    </div>
+
+    <div class="swiper-button-prev"><span class="icon pe-7s-angle-left"></span></div>
+    <div class="swiper-button-next"><span class="icon pe-7s-angle-right"></span></div>
+</div>

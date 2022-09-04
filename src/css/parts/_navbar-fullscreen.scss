@@ -1,0 +1,199 @@
+.dx-navbar.dx-navbar-fullscreen {
+    position: fixed;
+    align-items: flex-start;
+    justify-content: flex-start;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    font-family: $font_nav;
+    visibility: hidden;
+    opacity: 0;
+    will-change: opacity;
+    transition: visibility .3s ease-in-out, opacity .3s ease-in-out;
+    z-index: -1000;
+
+    @media screen and (min-width: 991px) {
+        &::-webkit-scrollbar-track {
+            background-color: $color_dark_1;
+        }
+        &::-webkit-scrollbar {
+            width: 8px;
+            background-color: $color_dark_1;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: #fff;
+            border-radius: 4px;
+        }
+    }
+
+    &.dx-navbar-fullscreen-open {
+        visibility: visible;
+        opacity: 1;
+
+        .dx-navbar-burger {
+            visibility: visible;
+        }
+    }
+
+
+    .container,
+    .container-fluid,
+    > div {
+        position: static;
+        align-items: flex-start;
+        justify-content: center;
+        height: auto;
+        max-height: 100%;
+    }
+    .dx-navbar-content {
+        flex-direction: column;
+        align-items: stretch;
+        width: auto;
+        padding: 90px 20px;
+        overflow: hidden;
+
+        .dx-nav:first-child {
+            flex-direction: column;
+
+            > li {
+                margin: 0;
+            }
+            a {
+                position: relative;
+                font-size: .875rem;
+            }
+        }
+        .dx-nav:last-child {
+            align-items: center;
+        }
+        .dx-nav {
+            align-items: stretch;
+            justify-content: flex-start;
+            width: auto;
+            min-width: 240px;
+
+            + .dx-nav {
+                margin-top: 49px;
+            }
+        }
+
+        > ul > li {
+            display: block;
+
+
+            &.active a::before {
+                display: none;
+            }
+
+            &.dx-drop-item {
+                > a {
+                    padding-right: 20px;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        right: 0;
+                        left: auto;
+                        width: 2px;
+                        height: 2px;
+                        margin-top: -1px;
+                        background-color: rgba($color_grey_3, .5);
+                        transition: background-color .2s ease-in-out;
+                    }
+                }
+                &:hover > a::after,
+                &.hover > a::after,
+                &.active > a::after {
+                    background-color: $color_grey_3;
+                }
+                &:hover {
+                    &::after,
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .dx-navbar-dropdown {
+        position: static;
+        flex-wrap: nowrap;
+        padding: 0 0 0 10px;
+        margin: 0 -20px 0 0;
+        overflow: hidden;
+        font-family: $font_nav;
+        visibility: visible;
+        background: none;
+        box-shadow: none;
+        opacity: 1;
+        transform: translateY(0);
+
+        &.collapse {
+            &:not(.show) {
+                display: none;
+            }
+        }
+        &.collapsing {
+            height: 0;
+            transition: height .3s ease;
+        }
+        &::before {
+            display: none;
+        }
+
+        .dx-navbar-dropdown {
+            padding: 0 0 0 10px;
+            margin: 0 -20px 0 0;
+
+            > li {
+                &.dx-drop-item {
+                    a:not(.dx-btn) {
+                        padding: 13px 0 20px;
+                    }
+                }
+                a:not(.dx-btn) {
+                    padding: 13px 0;
+                }
+            }
+        }
+
+        > li {
+            max-width: 100%;
+            margin: 0;
+
+            &:first-child {
+                padding-top: 10px;
+            }
+            &:last-child {
+                padding-bottom: 10px;
+            }
+
+            &.active > a {
+                color: #fff;
+                background: none;
+            }
+
+            a {
+                padding: 10px 0;
+                font-weight: 500;
+                color: $color_text_2;
+                text-transform: uppercase;
+
+                &:hover,
+                &:focus,
+                &.active {
+                    color: #fff;
+                    background: none;
+                }
+            }
+        }
+    }
+}

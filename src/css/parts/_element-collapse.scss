@@ -1,0 +1,32 @@
+.dx-accordion {
+    .dx-accordion-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        padding: 0;
+        margin: 0;
+        font-size: 1.6rem;
+        font-weight: inherit;
+        cursor: pointer;
+        background: none;
+        border: 0;
+        box-shadow: none;
+
+        > .icon {
+            transition: transform .2s ease-in-out;
+            transform: scaleY(1) rotate(90deg);
+        }
+
+        &.collapsed > .icon {
+            transform: scaleY(-1);
+        }
+    }
+    .dx-collapse {
+        .dx-list-documentation {
+            padding-top: 15px;
+            padding-bottom: 0;
+        }
+    }
+}

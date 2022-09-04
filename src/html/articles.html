@@ -1,0 +1,109 @@
+{% set header_title = 'Knowledge Base - How can we help you?' %}
+{% extends 'layouts/layout-1.html' %}
+{% set navbar_sticky = true %}
+{% set navbar_expand_lg = true %}
+
+{% block content %}
+
+    <header class="dx-header dx-box-1">
+        <div class="container">
+            <div class="bg-image bg-image-parallax">
+                <img src="assets/images/bg-header-4.png" class="jarallax-img" alt="">
+                <div style="background-color: rgba(27, 27, 27, .8);"></div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-xl-7">
+                    <h1 class="h2 mb-30 text-white text-center">How can we help you?</h1>
+                    <form action="#" class="dx-form dx-form-group-inputs">
+                        <input type="text" name="" value="" class="form-control" placeholder="Keyword search...">
+                        <button class="dx-btn dx-btn-lg">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="dx-box bg-white">
+        <div class="container">
+            <ul class="dx-links text-center">
+                <li><a href="help-center.html">Support Home</a></li>
+                <li><a href="documentations.html">Documentations</a></li>
+                <li class="active"><a href="articles.html">Knowledge Base</a></li>
+                <li><a href="forums.html">Forums</a></li>
+                <li><a href="ticket.html">Ticket System</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="dx-separator"></div>
+    <div class="dx-box-5 pb-100 bg-grey-6">
+        <div class="container">
+            <div class="row vertical-gap md-gap">
+                <div class="col-lg-8">
+                    <div class="dx-box dx-box-decorated">
+                        <div class="dx-blog-post">
+                            <div class="dx-blog-post-box pt-30 pb-30">
+                                <h2 class="h4 mnt-5 mb-8">Browse Article Categories</h2>
+                                {% from "macros/breadcrumbs.html" import breadcrumbs %}
+                                {{ breadcrumbs('text-left dx-breadcrumbs-dark mnb-8', [['help-center', 'Support Home', 'Articles']]) }}
+                            </div>
+                            <div class="dx-separator"></div>
+                            <div class="dx-blog-post-box">
+                                <div class="row vertical-gap lg-gap">
+                                    {% from "macros/article.html" import articleList %}
+                                    <div class="col-sm-6">
+                                        {{ articleList("Quantial", "4", "single-article-category.html", [["Make menu dropdown working without JavaScript", "single-article.html"], ["Google Analytics", "single-article.html"], ["How to manually import Demo data (if you faced with problems in one-click demo import)", "single-article.html"]]) }}
+                                    </div>
+                                    <div class="col-sm-6">
+                                        {{ articleList("Sensific", "4", "single-article-category.html", [["Google Analytics", "single-article.html"], ["How to manually import Demo data (if you faced with problems in one-click demo import)", "single-article.html"], ["Make menu dropdown working witho", "single-article.html"]]) }}
+                                    </div>
+                                    <div class="col-sm-6">
+                                        {{ articleList("Minist", "8", "single-article-category.html", [["WordPress Themes FAQ", "single-article.html"], ["Change navbar background color", "single-article.html"], ["Change images and banners overlay color", "single-article.html"]]) }}
+                                    </div>
+                                    <div class="col-sm-6">
+                                        {{ articleList("Desty", "2", "single-article-category.html", [["Make menu dropdown working without JavaScript", "single-article.html"], ["Google Map API Warning (NoApiKeys)", "single-article.html"]]) }}
+                                    </div>
+                                    <div class="col-sm-6">
+                                        {{ articleList("Silies", "3", "single-article-category.html", [["Add top menu link inside dropdown on mobile devices", "single-article.html"], ["Google Map API Warning (NoApiKeys)", "single-article.html"], ["Make dropdown items links working", "single-article.html"]]) }}
+                                    </div>
+                                    <div class="col-sm-6">
+                                        {{ articleList("Interra", "3", "single-article-category.html", [["WordPress Themes FAQ", "single-article.html"], ["Make menu dropdown working without JavaScript", "single-article.html"], ["Google Analytics", "single-article.html"]]) }}
+                                    </div>
+                                    <div class="col-sm-6">
+                                        {{ articleList("Explora", "2", "single-article-category.html", [["Google Map API Warning (NoApiKeys)", "single-article.html"], ["Make menu dropdown working without JavaScript", "single-article.html"]]) }}
+                                    </div>
+                                    <div class="col-sm-6">
+                                        {{ articleList("Thoute", "2", "single-article-category.html", [["Make menu dropdown working without JavaScript", "single-article.html"], ["Google Map API Warning (NoApiKeys)", "single-article.html"]]) }}
+                                    </div>
+                                    <div class="col-sm-6">
+                                        {{ articleList("Accountry", "3", "single-article-category.html", [["Google Analytics", "single-article.html"], ["How to open image by click on slider", "single-article.html"], ["WordPress Themes FAQ", "single-article.html"]]) }}
+                                    </div>
+                                    <div class="col-sm-6">
+                                        {{ articleList("Mained", "2", "single-article-category.html", [["Google Analytics", "single-article.html"], ["WordPress Themes FAQ", "single-article.html"]]) }}
+                                    </div>
+                                    <div class="col-sm-6">
+                                        {{ articleList("Treate", "1", "single-article-category.html", [["Google Map API Warning (NoApiKeys)", "single-article.html"]]) }}
+                                    </div>
+                                    <div class="col-sm-6">
+                                        {{ articleList("Priety", "1", "single-article-category.html", [["Google Map API Warning (NoApiKeys)", "single-article.html"]]) }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="dx-sticky dx-sidebar" data-sticky-offsetTop="120" data-sticky-offsetBot="40">
+                        {% from "macros/widgets.html" import subscribe, search, categoriesArticles, latestArticles, latestForums %}
+                        {{ subscribe('') }}
+                        {{ search('') }}
+                        {{ categoriesArticles('') }}
+                        {{ latestArticles('') }}
+                        {{ latestForums('') }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% macro blog(img="", title="", date="", views="", category="", author="", text="") %}
+<div class="dx-blog-item dx-box dx-box-decorated">
+    <a href="single-post.html" class="dx-blog-item-img"><img src="assets/images/{{ img }}" alt=""></a>
+    <div class="dx-blog-item-cont">
+        <h2 class="h3 dx-blog-item-title"><a href="single-post.html">{{ title }}</a></h2>
+        <ul class="dx-blog-item-info">
+            <li>Date: {{ date }}</li>
+            <li>Views: {{ views }}</li>
+            <li>Category:
+                <ul class="dx-blog-item-categories">
+                    <li><a href="#">{{ category }}</a></li>
+                </ul>
+            </li>
+            <li>Author: <a href="#">{{ author }}</a></li>
+        </ul>
+        <div class="dx-blog-item-text">
+            <p>{{ text }}</p>
+        </div>
+        <a href="single-post.html" class="dx-btn dx-btn-lg">Read More</a>
+    </div>
+</div>
+{% endmacro %}

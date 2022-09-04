@@ -1,0 +1,22 @@
+{% include "layouts/_head.html" %}
+
+<body>
+    {% if nav %}
+        {% include "shared/page-nav.html" %}
+    {% endif %}
+
+    <div class="dx-main">
+        {% block content %}{% endblock %}
+
+        {% include "shared/page-footer.html" %}
+    </div>
+
+    {% include "shared/page-popup.html" %}
+
+    {% block after_content %}{% endblock %}
+
+    {% include "layouts/_foot.html" %}
+
+    {% block javascript %}{% endblock %}
+</body>
+</html>

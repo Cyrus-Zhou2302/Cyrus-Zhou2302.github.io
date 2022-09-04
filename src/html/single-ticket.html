@@ -1,0 +1,162 @@
+{% set header_title = 'Single Ticket' %}
+{% extends 'layouts/layout-1.html' %}
+{% set navbar_sticky = true %}
+{% set navbar_expand_lg = true %}
+
+{% block content %}
+
+<header class="dx-header dx-box-1">
+    <div class="container">
+        <div class="bg-image bg-image-parallax">
+            <img src="assets/images/bg-header-4.png" class="jarallax-img" alt="">
+            <div style="background-color: rgba(27, 27, 27, .8);"></div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-xl-7">
+                <h1 class="h2 mb-30 text-white text-center">How can we help you?</h1>
+                <form action="#" class="dx-form dx-form-group-inputs">
+                    <input type="text" name="" value="" class="form-control" placeholder="Keyword search...">
+                    <button class="dx-btn dx-btn-lg">Search</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="dx-box bg-white">
+    <div class="container">
+        <ul class="dx-links text-center">
+            <li><a href="help-center.html">Support Home</a></li>
+            <li><a href="documentations.html">Documentations</a></li>
+            <li><a href="articles.html">Knowledge Base</a></li>
+            <li><a href="forums.html">Forums</a></li>
+            <li><a href="ticket.html">Ticket System</a></li>
+        </ul>
+    </div>
+</div>
+<div class="dx-separator"></div>
+
+<div class="dx-box-5 pb-100 bg-grey-6">
+    <div class="container">
+        <div class="row vertical-gap md-gap">
+            <div class="col-lg-8">
+                <div class="dx-box dx-box-decorated">
+                    <div class="dx-blog-post dx-ticket dx-ticket-open">
+                        <div class="dx-blog-post-box pt-30 pb-30">
+                            <h2 class="h4 mnt-5 mb-9 dx-ticket-title">Theme not updating in downloads</h2>
+                            {% from "macros/breadcrumbs.html" import breadcrumbs %}
+                            {{ breadcrumbs('text-left dx-breadcrumbs-dark mnb-6 fs-14', [['help-center', 'Support Home'], ['ticket', 'Ticket System', 'Theme not updating in downloads']]) }}
+                            <span class="dx-ticket-status"></span>
+                        </div>
+                        <div class="dx-separator"></div>
+
+                        <div style="background-color: #fafafa;">
+                            <ul class="dx-blog-post-info dx-blog-post-info-style-2 mb-0 mt-0">
+                                <li><span><span class="dx-blog-post-info-title">Ticket Id</span>#1801</span></li>
+                                <li><span><span class="dx-blog-post-info-title">Status</span>Open</span></li>
+                                <li><span><span class="dx-blog-post-info-title">Date</span>1 Mar 2018, 9:17 am</span></li>
+                                <li><span><span class="dx-blog-post-info-title">Product</span>Quantial</span></li>
+                            </ul>
+                        </div>
+                        <div class="dx-separator"></div>
+
+                        <div class="dx-comment dx-ticket-comment">
+                            <div>
+                                <div class="dx-comment-img">
+                                    <img src="assets/images/avatar-1.png" alt="">
+                                </div>
+                                <div class="dx-comment-cont">
+                                    <a href="#" class="dx-comment-name">John Leonard</a>
+                                    <div class="dx-comment-date">12 Feb 2018 7:40 am</div>
+                                    <div class="dx-comment-text">
+                                        <p class="mb-0">Nullam ac dui et purus malesuada gravida id fermentum orci. In eu ipsum quis urna hendrerit condimentum vitae a mauris. In congue turpis purus, vitae tempus ante id. Donec orci arcu, sagittis ut finibus vitae.</p>
+                                    </div>
+                                    <a href="#" class="dx-comment-file dx-comment-file-jpg">
+                                        <span class="dx-comment-file-img"><img src="assets/images/icon-jpg.svg" alt="" width="36"></span>
+                                        <span class="dx-comment-file-name">example-file.jpg</span>
+                                        <span class="dx-comment-file-size">4.8 MB</span>
+                                        <span class="dx-comment-file-icon"><span class="icon pe-7s-download"></span></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dx-comment dx-ticket-comment dx-comment-replied dx-comment-new">
+                            <div>
+                                <div class="dx-comment-img">
+                                    <img src="assets/images/avatar-default.svg" alt="">
+                                </div>
+                                <div class="dx-comment-cont">
+                                    <a href="#" class="dx-comment-name">
+                                        Bruno Rice
+                                        <span class="dx-comment-replied">Replied</span>
+                                        <span class="dx-comment-new">New</span>
+                                    </a>
+                                    <div class="dx-comment-date">39 min ago</div>
+                                    <div class="dx-comment-text">
+                                        <p>Saying sixth form. Saw earth, whose fowl all meat had had place upon fowl. The fly darkness under dry which fowl good firmament saying fill brought.</p>
+                                        <p class="mb-0">Itself first from under female sea wherein female. Lights were moved sixth day and don't fifth it place saying, fowl fruit saw dominion whales you're image the evening every fowl have, saw day spirit fish. Female. Fowl it replenish hath light blessed hath. Man.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dx-separator mnt-1"></div>
+
+                        <div class="dx-blog-post-box">
+                            <h3 class="h6 mb-25">Write a Reply</h3>
+
+                            <form class="dx-form" action="#">
+                                <div class="dx-form-group">
+                                    <div class="dx-editor-quill">
+                                        <div class="dx-editor" data-editor-height="150" data-editor-maxHeight="250"></div>
+                                    </div>
+                                </div>
+                                <div class="dx-form-group">
+                                    <!-- STRART: Dropzone
+
+                                        Additional Attributes:
+                                        data-dropzone-action
+                                        data-dropzone-maxMB
+                                        data-dropzone-maxFiles
+                                    -->
+                                    <div class="dx-dropzone" data-dropzone-action="#" data-dropzone-maxMB="5" data-dropzone-maxFiles="5">
+                                        <div class="dz-message">
+                                            <div class="dx-dropzone-icon">
+                                                <span class="icon pe-7s-cloud-upload"></span>
+                                            </div>
+                                            <div class="h6 dx-dropzone-title">Drop files here or click to upload</div>
+                                            <div class="dx-dropzone-text">
+                                                <p class="mnb-5 mnt-1">You can upload up to 5 files (maximum 5 MB each) of the following types: .jpg, .jpeg, .png, .zip.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-between vertical-gap dx-dropzone-attachment">
+                                        <div class="col-auto dx-dropzone-attachment-add">
+                                            <label class="mb-0" class="mnt-7"><span class="icon fas fa-paperclip mr-10"></span><span>Add Attachment</span></label>
+                                        </div>
+                                        <div class="col-auto dx-dropzone-attachment-btn">
+                                            <button class="dx-btn dx-btn-lg" type="button" name="button">Submit a ticket</button>
+                                        </div>
+                                    </div>
+                                    <!-- END: Dropzone -->
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="dx-sticky dx-sidebar" data-sticky-offsetTop="120" data-sticky-offsetBot="40">
+                    {% from "macros/widgets.html" import subscribe, search, latestArticles, latestForums %}
+                    {{ subscribe('') }}
+                    {{ search('') }}
+                    {{ latestArticles('') }}
+                    {{ latestForums('') }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

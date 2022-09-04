@@ -1,0 +1,131 @@
+{% set header_title = 'Welcome to Amdesk' %}
+{% extends 'layouts/layout-1.html' %}
+{% set navbar_sticky = true %}
+{% set navbar_expand_lg = true %}
+
+{% block content %}
+
+    <header class="dx-header dx-box-4">
+        <div class="bg-image bg-image-parallax">
+            <img src="assets/images/bg-header.png" class="jarallax-img" alt="">
+            <div style="background-color: rgba(27, 27, 27, .75);"></div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                    <h1 class="display-3 text-white">Amdesk Template</h1>
+                    <p class="lead text-1">A high quality Bootstrap 4 template for your digital products with help center</p>
+                    <a href="store.html" class="dx-btn dx-btn-lg mt-10">View Products</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="dx-box-1">
+        <div class="container">
+            <div class="row vertical-gap lg-gap">
+                <div class="col-lg-4">
+                    {% from "macros/feature.html" import feature %}
+                    {{ feature('pe-7s-diamond', '7700 +', 'Happy Customers') }}
+                    {{ feature('pe-7s-like', '4.9', 'Author Rating') }}
+                </div>
+                <div class="col-lg-6">
+                    <h2>Who we are</h2>
+                    <p class="mb-0">We a team of enthusiasts that creating powerful digital products, that help your businesses growth. For all products, we provide a year of support and lifetime security updates.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="dx-box-1 bg-dark-1">
+        <div class="container">
+            <div class="row mnt-40 mnb-40">
+                {% from "macros/feature.html" import feature2 %}
+                <div class="col-12 col-md-6 col-lg-4">
+                    {{ feature2('pe-7s-edit', 'Easy Setup', 'We make our products easy to setup and customize.') }}
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    {{ feature2('pe-7s-paint-bucket', 'Perfect Design', 'Choose our solutions and your website will be in a trend always.') }}
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    {{ feature2('pe-7s-timer', 'Lifetime Updates', 'We improve our products after release and you will get it for free.') }}
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    {{ feature2('pe-7s-cloud-download', 'Freebies', 'Not only paid products, but also freebies available.') }}
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    {{ feature2('pe-7s-portfolio', 'Clean Code', 'All our products provided with best code quality and high performance.') }}
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    {{ feature2('pe-7s-headphones', 'Outstanding Support', 'We provide fast and professional support through support system.') }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="dx-box-1 bg-grey-6">
+        <div class="container">
+            <h2 class="text-center mb-60">Latest Products</h2>
+
+            <div class="row vertical-gap">
+                {% from "macros/portfolio.html" import portfolio %}
+                <div class="col-12 col-md-6 col-lg-4">
+                    {{ portfolio('product-1', '#', 'Quantial – Moving Upon Signs Moveth Lesser', '49') }}
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    {{ portfolio('product-2', '#', 'Sensific – Saying Beast Lesser for in Fruitful', '59') }}
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    {{ portfolio('product-3', '#', 'Minist – Subdue Above for Signs Dry is Have Great', '39') }}
+                </div>
+            </div>
+            <div class="text-center mt-70">
+                <a href="#" class="dx-btn dx-btn-lg">View Products</a>
+            </div>
+
+            <div class="dx-box-1">
+                <span class="dx-decorated" style="background-image: url('assets/images/decorated-pattern-light.svg');"></span>
+            </div>
+
+            <h2 class="text-center mb-40">Reviews</h2>
+            <div class="dx-box">
+                <div class="row justify-content-center">
+                    <div class="col-xl-10">
+                        {% include "shared/page-slider-reviews.html" %}
+                    </div>
+                </div>
+                <div class="dx-slider-arrows-clone dx-slider-arrows-reviews"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row no-gutters">
+        <div class="col-lg-6 bg-dark-1">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-10">
+                    <div class="container">
+                        <div class="dx-box-1">
+                            <h2 class="text-white">Latest Products</h2>
+                            <p class="text-2">Join the newsletter to receive news, updates, new products and freebies in your inbox.</p>
+                            <a data-fancybox data-touch="false" data-src="#subscribe" href="javascript:;" class="dx-btn dx-btn-lg dx-btn-transparent">Subscribe</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 bg-main-1">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-10">
+                    <div class="container">
+                        <div class="dx-box-1">
+                            <h2 class="text-white">Visit our Support Desk</h2>
+                            <p class="text-white op-8">We have a Support Desk for our users and a well experienced team to quickly answer your questions.</p>
+                            <a href="help-center.html" class="dx-btn dx-btn-lg dx-btn-transparent">Get support</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

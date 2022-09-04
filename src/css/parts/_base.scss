@@ -1,0 +1,220 @@
+body {
+    position: relative;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+}
+
+// Main Content
+.dx-main {
+    overflow-x: hidden;
+    overflow-y: initial;
+}
+
+// Decorated Block
+.dx-decorated {
+    display: block;
+    width: 100%;
+    height: 40px;
+}
+
+// Separetor
+.dx-separator {
+    display: block;
+    border-bottom: 1px solid $color_grey_5;
+}
+
+// Img
+.dx-img {
+    position: relative;
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+
+    > img {
+        max-width: 100%;
+        will-change: transform;
+        transition: transform .4s ease-in-out;
+        transform: scale(1);
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        visibility: hidden;
+        background-color: rgba(32, 32, 32, .1);
+        opacity: 0;
+        will-change: opacity;
+        transition: visibility .2s ease-in-out, opacity .2s ease-in-out;
+    }
+
+    &:hover {
+        > img {
+            transform: scale(1.03);
+        }
+        &::after {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+// Video
+.dx-video {
+    position: relative;
+    display: block;
+    width: 100%;
+
+    &::after {
+        content: "";
+        display: block;
+        padding-top: 56.25%;
+    }
+
+    > .dx-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+// Block Decorated
+.dx-block-decorated {
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 0 30px 0 rgba(#000, .04);
+    transition: box-shadow .2s ease-in-out;
+
+    &:hover,
+    &.hover {
+        box-shadow: 0 0 30px 0 rgba(#000, .08);
+    }
+}
+
+// Icons
+.icon {
+    display: inline-block;
+}
+
+// Links
+.dx-links {
+    padding: 18px 0 28px;
+    margin: 0 -18px;
+
+    > li {
+        display: inline-block;
+        padding: 10px 0 0;
+        margin: 0 18px 0 18px;
+        font-size: .9375rem;
+        font-weight: 600;
+        color: $color_dark_1;
+        list-style: none;
+        cursor: pointer;
+        transition: color .2s ease-in-out;
+
+        &:hover,
+        &.hover,
+        &.active {
+            color: $color_main_1;
+        }
+
+        a {
+            color: inherit;
+            transition: color 0s;
+
+            &:hover,
+            &:focus {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+// Object Fit background
+.bg-image-parallax,
+.bg-image {
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+        // stylelint-disable-next-line
+        font-family: "object-fit: cover";
+        object-fit: cover;
+    }
+}
+
+// bg image
+.bg-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-position: 50% 50%;
+    background-size: cover;
+    z-index: -1;
+
+    > * {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-position: 50% 50%;
+        background-size: cover;
+        z-index: 1;
+    }
+}
+
+// gaps
+.dx-gap,
+.dx-gap-1,
+.dx-gap-2,
+.dx-gap-3,
+.dx-gap-4,
+.dx-gap-5,
+.dx-gap-6 {
+    display: block;
+    height: 15px;
+    &::after,
+    &::before {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+.dx-gap-1 {
+    height: 25px;
+}
+.dx-gap-2 {
+    height: 40px;
+}
+.dx-gap-3 {
+    height: 50px;
+}
+.dx-gap-4 {
+    height: 60px;
+}
+.dx-gap-5 {
+    height: 80px;
+}
+.dx-gap-6 {
+    height: 100px;
+}
+
+// body scrollbar checker
+.dx-body-scrollbar-measure {
+    position: absolute;
+    top: -9999px;
+    width: 50px;
+    height: 50px;
+    overflow: scroll;
+}

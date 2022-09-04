@@ -1,0 +1,662 @@
+$navbar_min_height: 80px !default;
+
+.dx-navbar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 100vw;
+    min-height: $navbar_min_height;
+    font-family: $font_nav;
+    background-color: $color_dark_1;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0);
+    transition: background-color .2s ease-in-out;
+    z-index: 1000;
+
+    // Logo
+    .dx-nav-logo {
+        display: flex;
+        flex: 0 0 auto;
+        align-items: center;
+        max-width: 100%;
+        margin-right: 79px;
+        font-family: $font_nav;
+        font-size: 1.375rem;
+        font-weight: 400;
+        line-height: 1;
+        color: #fff;
+        text-decoration: none;
+        letter-spacing: .01em;
+        transition: color .2s ease-in-out;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $color_main_1;
+            text-decoration: none;
+        }
+    }
+
+
+    // Icon
+    .dx-nav-icon:not(.dx-btn) {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+
+        > .icon {
+            position: relative;
+            opacity: .7;
+            will-change: opacity;
+            transition: opacity .2s ease-in-out;
+        }
+
+        &:hover,
+        &:focus,
+        &.active {
+            > .icon {
+                opacity: 1;
+            }
+
+            ~ .dx-navbar-dropdown {
+                visibility: visible;
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    }
+
+    .dx-nav-item-drop .dx-nav-icon:not(.dx-btn) .dx-nav-badge {
+        top: 50%;
+        margin-top: -20px;
+    }
+
+
+    // Badge
+    .dx-nav-badge {
+        position: absolute;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        top: -4px;
+        right: -8px;
+        min-width: 16px;
+        height: 16px;
+        padding: 0 4px;
+        font-size: 9px;
+        line-height: 0;
+        color: #fff;
+        background-color: $color_main_1;
+        border-radius: 8px;
+        box-shadow: 0 0 0 2px $color_dark_1;
+        z-index: 1;
+    }
+
+    // Signin Link
+    .dx-nav-signin {
+        display: flex;
+        align-items: center;
+        padding: 0;
+        margin: -3px 0;
+        font-family: $font_body;
+        font-size: .875rem;
+        font-weight: 400;
+        line-height: 1;
+        color: $color_text_2;
+        letter-spacing: .05em;
+
+        ~ .dx-navbar-dropdown .dx-navbar-dropdown-triangle {
+            margin-left: 35px;
+        }
+
+        &:hover,
+        &:focus,
+        &.active {
+            color: #fff;
+            text-decoration: none;
+
+            ~ .dx-navbar-dropdown {
+                visibility: visible;
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .dx-nav-signin-img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            overflow: hidden;
+            border-radius: 100%;
+
+            + .dx-nav-signin-name {
+                margin-left: 12px;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                // stylelint-disable-next-line
+                font-family: "object-fit: cover";
+                object-fit: cover;
+            }
+        }
+    }
+
+    // Burger
+    .dx-navbar-burger {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        right: 20px;
+        width: 34px;
+        height: 20px;
+        padding: 0;
+        cursor: pointer;
+        visibility: hidden;
+        background: none;
+        border: 0;
+
+        > span {
+            position: relative;
+            display: flex;
+            width: 24px;
+            height: 2px;
+            background-color: #fff;
+            will-change: transform, opacity;
+            transition: background-color .2s ease-in-out, visibility .2s ease-in-out, transform .2s ease-in-out, opacity .2s ease-in-out;
+
+            + span {
+                margin-top: 5px;
+            }
+            &:nth-child(2) {
+                width: 16px;
+                transform: translateX(0);
+            }
+        }
+
+        &.active > span {
+            &:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            &:nth-child(2) {
+                visibility: hidden;
+                opacity: 0;
+            }
+            &:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -5px);
+            }
+        }
+
+        &:hover,
+        &:focus {
+            > span {
+                background-color: $color_main_1;
+
+                &:nth-child(2) {
+                    transform: translateX(-7px);
+                }
+            }
+        }
+    }
+
+    > .container,
+    > .container-fluid {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+
+    // Content
+    .dx-navbar-content {
+        display: flex;
+        flex-basis: 0;
+        flex-grow: 1;
+        align-items: center;
+        max-width: 100%;
+    }
+
+
+    // Nav
+    .dx-nav {
+        display: flex;
+        flex-basis: 0;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        align-items: center;
+        max-width: 100%;
+        padding: 0;
+        margin: 0;
+
+        > li {
+            display: inline-block;
+            padding: 0;
+            margin: 0 34px 0 0;
+            list-style: none;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    // Link
+    .dx-nav-link {
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+        font-size: .75rem;
+        font-weight: 500;
+        line-height: 1;
+        color: $color_text_2;
+        text-transform: uppercase;
+        letter-spacing: .03em;
+
+        > .icon {
+            margin-right: 12px;
+            font-size: 1.45rem;
+        }
+
+        &:hover,
+        &:focus,
+        &.active {
+            color: #fff;
+            text-decoration: none;
+
+            ~ .dx-navbar-dropdown {
+                visibility: visible;
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    }
+
+    // Item
+    .dx-nav-item.active > .nav-link {
+        color: #fff;
+
+        &::before {
+            content: "";
+            position: absolute;
+            right: -15px;
+            bottom: 0;
+            left: -15px;
+            height: 2px;
+            background-color: $color_main_1;
+        }
+    }
+
+    // Item Drop
+    .dx-nav-item-drop {
+        position: relative;
+
+        &:hover > .dx-navbar-dropdown {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    // Dropdown
+    .dx-navbar-dropdown {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        top: 100%;
+        right: auto;
+        bottom: auto;
+        left: -20px;
+        width: auto;
+        padding: 15px 0;
+        margin-top: 12px;
+        font-family: $font_body;
+        text-transform: none;
+        visibility: hidden;
+        background-color: #fff;
+        border-radius: 3px;
+        box-shadow: 0 0 30px 0 rgba(#000, .05);
+        opacity: 0;
+        will-change: transform, opacity;
+        transition: visibility .15s ease-in-out, opacity .15s ease-in-out, transform .15s ease-in-out;
+        transform: translateY(3px);
+
+        // zone hover
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            height: 12px;
+            margin-top: -12px;
+        }
+
+        &.dx-navbar-dropdown-dark > .dx-nav-item-drop {
+            &:hover > a::after,
+            &.hover > a::after,
+            &.active > a::after {
+                background-color: $color_grey_3;
+            }
+        }
+
+        > .dx-nav-item-drop {
+            // Round drop-item
+            > a::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: 20px;
+                left: auto;
+                width: 2px;
+                height: 2px;
+                margin-top: -1px;
+                background-color: rgba($color_grey_3, .5);
+                transition: background-color .2s ease-in-out;
+            }
+            &:hover > a::after,
+            &.hover > a::after,
+            &.active > a::after {
+                background-color: $color_grey_1;
+            }
+        }
+
+        // Triangle
+        .dx-navbar-dropdown-triangle {
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            margin-bottom: -1px;
+            margin-left: 20px;
+            border: 10px solid transparent;
+            border-bottom: 8px solid #fff;
+        }
+
+
+        // Align
+        &.dx-navbar-dropdown-left {
+            right: -20px;
+            left: auto;
+
+            .dx-navbar-dropdown-triangle {
+                right: 0;
+                left: auto;
+                margin-right: 20px;
+                margin-left: 0;
+            }
+        }
+
+        &.dx-navbar-dropdown-right {
+            right: auto;
+            left: -20px;
+
+            .dx-navbar-dropdown-triangle {
+                right: auto;
+                left: 0;
+                margin-right: auto;
+                margin-left: 20px;
+            }
+        }
+
+
+        // Children Menu
+        .dx-navbar-dropdown {
+            top: 0;
+            left: 100%;
+            margin-top: -15px;
+            margin-left: 12px;
+
+            // zone hover
+            &::after {
+                right: auto;
+                bottom: 0;
+                width: 12px;
+                height: auto;
+                margin-top: 0;
+                margin-left: -12px;
+            }
+
+            .dx-navbar-dropdown-triangle {
+                right: 100%;
+                bottom: auto;
+                left: auto;
+                margin-top: 8px;
+                margin-right: -1px;
+                margin-bottom: 0;
+                margin-left: 0;
+                border: 10px solid transparent;
+                border-right: 8px solid #fff;
+            }
+        }
+
+        .dx-navbar-dropdown-left {
+            right: 100%;
+            left: auto;
+            margin-right: 12px;
+            margin-left: 0;
+
+            // zone hover
+            &::after {
+                bottom: 0;
+                left: auto;
+                width: 12px;
+                height: auto;
+                margin-top: 0;
+                margin-right: -12px;
+            }
+
+            .dx-navbar-dropdown-triangle {
+                right: auto;
+                bottom: auto;
+                left: 100%;
+                margin-right: 0;
+                margin-bottom: 0;
+                margin-left: -1px;
+                border: 10px solid transparent;
+                border-left: 8px solid #fff;
+            }
+        }
+
+        .dx-navbar-dropdown-right {
+            right: auto;
+            left: 100%;
+            margin-right: 0;
+            margin-left: 12px;
+
+            // zone hover
+            &::after {
+                right: auto;
+                bottom: 0;
+                width: 12px;
+                height: auto;
+                margin-top: 0;
+                margin-left: -12px;
+            }
+
+            .dx-navbar-dropdown-triangle {
+                right: 100%;
+                bottom: auto;
+                left: auto;
+                margin-right: -1px;
+                margin-bottom: 0;
+                margin-left: 0;
+                border: 10px solid transparent;
+                border-right: 8px solid #fff;
+            }
+        }
+
+
+        // Dark Dropdown
+        &.dx-navbar-dropdown-dark {
+            background-color: $color_dark_1;
+
+            .dx-navbar-dropdown-triangle {
+                border: 10px solid transparent;
+                border-bottom: 8px solid $color_dark_1;
+            }
+            &.dx-navbar-dropdown-left .dx-navbar-dropdown-triangle {
+                border: 10px solid transparent;
+                border-left: 8px solid $color_dark_1;
+            }
+            &.dx-navbar-dropdown-bot .dx-navbar-dropdown-triangle {
+                border: 10px solid transparent;
+                border-bottom: 8px solid $color_dark_1;
+            }
+            .dx-navbar-dropdown .dx-navbar-dropdown-triangle {
+                border: 10px solid transparent;
+                border-right: 8px solid $color_dark_1;
+            }
+
+            > li {
+                &.active > a {
+                    color: #fff;
+                    background-color: rgba(#fff, .04);
+                }
+                > a {
+                    color: $color_grey_3;
+
+                    &:hover,
+                    &.hover {
+                        color: #fff;
+                        background-color: rgba(#fff, .04);
+                    }
+                }
+            }
+        }
+
+        > li {
+            display: block;
+            width: 100%;
+            padding: 0;
+
+            &.dx-nav-item-drop > a {
+                padding-right: 40px;
+            }
+
+            + li {
+                margin-top: 0;
+            }
+
+            &.active > a {
+                color: $color_dark_1;
+                background-color: rgba(#000, .025);
+            }
+
+            > a {
+                padding: 10px 50px 10px 20px;
+                font-size: .875rem;
+                font-weight: 400;
+                color: $color_grey_1;
+                text-transform: none;
+                white-space: nowrap;
+                transition: color .2s ease-in-out, background-color .2s ease-in-out;
+
+                &:hover,
+                &.hover {
+                    color: $color_dark_1;
+                    background-color: rgba(#000, .025);
+                }
+                &:focus,
+                &.focus,
+                &.active {
+                    color: $color_dark_1;
+                }
+            }
+        }
+    }
+
+    // Media
+    &.dx-navbar-expand {
+        .dx-navbar-content {
+            display: none;
+        }
+        .dx-navbar-burger {
+            visibility: visible;
+        }
+    }
+    &.dx-navbar-expand-lg {
+        @media screen and #{$media_lg} {
+            .dx-navbar-content {
+                display: none;
+            }
+            .dx-navbar-burger {
+                visibility: visible;
+            }
+        }
+    }
+    &.dx-navbar-expand-xl {
+        @media screen and #{$media_xl} {
+            .dx-navbar-content {
+                display: none;
+            }
+            .dx-navbar-burger {
+                visibility: visible;
+            }
+        }
+    }
+
+    // Additional Classes
+    // Scroll
+    &.dx-navbar-scroll {
+        box-shadow: 0 1px 0 rgba(255, 255, 255, .05);
+    }
+
+    // Autohide
+    &.dx-navbar-autohide {
+        will-change: transform;
+        transition: transform .2s ease-in-out;
+        transform: translateY(0);
+
+        &.dx-onscroll-hide {
+            transform: translateY(-100px);
+        }
+        &.dx-onscroll-show {
+            transform: translateY(0);
+        }
+    }
+
+    // Fixed
+    &.dx-navbar-fixed {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+    }
+
+    // Sticky
+    &.dx-navbar-sticky {
+        position: sticky;
+        top: 0;
+        right: 0;
+        left: 0;
+    }
+}
+
+
+.dx-navbar-top .dx-nav {
+    &:not(:last-child) {
+        margin-right: auto;
+    }
+
+    &.dx-nav-align-right {
+        flex: 0 0 auto;
+        justify-content: flex-end;
+        margin-left: 30px;
+    }
+
+
+    > li > a {
+        display: flex;
+        align-items: center;
+        min-height: $navbar_min_height;
+    }
+}

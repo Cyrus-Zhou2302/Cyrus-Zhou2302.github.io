@@ -1,0 +1,66 @@
+.dx-changelog {
+    + .dx-changelog {
+        margin-top: 48px;
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+
+        > li {
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            letter-spacing: normal;
+            list-style: none;
+
+            + li {
+                margin-top: 12px;
+            }
+
+            .dx-changelog-badge {
+                position: relative;
+                display: inline-block;
+                top: 0;
+                width: 41px;
+                min-width: 41px;
+                margin-right: 24px;
+                font-family: $font_title;
+                font-size: .735rem;
+                font-weight: 700;
+                line-height: 12px;
+                color: $color_dark_1;
+                text-transform: uppercase;
+                box-shadow: 4px 0 0 -1px $color_dark_1;
+            }
+
+            &.dx-changelog-fix {
+                .dx-changelog-badge {
+                    box-shadow: 5px -1px 0 -1px $color_fix, 5px 0 0 -1px $color_fix;
+                }
+            }
+            &.dx-changelog-del {
+                .dx-changelog-badge {
+                    box-shadow: 5px -1px 0 -1px $color_del, 5px 0 0 -1px $color_del;
+                }
+            }
+            &.dx-changelog-add {
+                .dx-changelog-badge {
+                    box-shadow: 5px -1px 0 -1px $color_add, 5px 0 0 -1px $color_add;
+                }
+            }
+            &.dx-changelog-imp {
+                .dx-changelog-badge {
+                    box-shadow: 5px -1px 0 -1px $color_imp, 5px 0 0 -1px $color_imp;
+                }
+            }
+            &.dx-changelog-up {
+                .dx-changelog-badge {
+                    box-shadow: 5px -1px 0 -1px $color_up, 5px 0 0 -1px $color_up;
+                }
+            }
+        }
+    }
+}
